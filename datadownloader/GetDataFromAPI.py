@@ -3,6 +3,7 @@ __author__ = 'abhisheksh'
 import json
 import meetup.api
 import  pandas as pd
+
 from  Utils.Logging import LoggingUtil
 from datetime import  datetime
 from APIClient.MeetupClients import MeetUpClients
@@ -203,9 +204,9 @@ class APIDataExtractionFacade:
 
 
 
-mainfolder='../'
-cat = None
-topictofind = 'sanskrit'
+mainfolder= os.path.dirname(os.path.realpath(__file__))
+cat = 'Fitness'
+topictofind = None
 city_country_state = None
 
 if cat:
@@ -215,8 +216,8 @@ elif topictofind:
 else:
     raise ValueError(" Please set a catgeory or topic whose data has to be extracted")
 
-opfolder = mainfolder+'/../'+ foldername +'/'
-topictpfind = ''
+#opfolder = mainfolder+'/../../../'+ foldername +'/'
+opfolder ='/home/abhisheksh/PROJECTS/Meetup/New/sanskrit/'
 
 
 apide=APIDataExtractionFacade(mainfolder,opfolder,cattofind=cat,topic=topictofind,locinfo=city_country_state,specificgroups=None)

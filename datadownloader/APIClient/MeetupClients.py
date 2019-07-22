@@ -11,7 +11,7 @@ class MeetUpClients:
     def __init__(self,config=None,configfolder=None):
         self.configfolder=configfolder
         if(self.configfolder is not  None):
-            self.configfile=self.configfolder+'Config/MeetupKeys2.json'
+            self.configfile=self.configfolder+'/Config/MeetupKeys2.json'
         else:
             self.configfile='Config/MeetupKeys2.json'
 
