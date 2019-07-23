@@ -6,14 +6,16 @@ __author__ = 'abhisheksh'
 import json
 import meetup.api
 import  pandas as pd
+import  os
 
 class MeetUpClients:
     def __init__(self,config=None,configfolder=None):
         self.configfolder=configfolder
         if(self.configfolder is not  None):
-            self.configfile=self.configfolder+'/Config/MeetupKeys2.json'
+            self.configfile=self.configfolder+'/MeetupKeys2.json'
         else:
-            self.configfile='Config/MeetupKeys2.json'
+            configfilepath = os.path.join(os.path.dirname(os.path.realpath(__file__)),'..','Config/MeetupKeys2.json')
+            self.configfile=configfilepath
 
         if(config is None):
             self.config=self.ReadDefaultConfig()

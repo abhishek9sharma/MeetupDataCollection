@@ -217,12 +217,10 @@ else:
     raise ValueError(" Please set a catgeory or topic whose data has to be extracted")
 
 #opfolder = mainfolder+'/../../../'+ foldername +'/'
-opfolder ='/home/abhisheksh/PROJECTS/Meetup/New/sanskrit/'
-
+opfolder ='/home/abhisheksh/PROJECTS/Meetup/New/' +foldername +'/'
 
 apide=APIDataExtractionFacade(mainfolder,opfolder,cattofind=cat,topic=topictofind,locinfo=city_country_state,specificgroups=None)
 apide.StartInfoExtraction()
-
 
 
 

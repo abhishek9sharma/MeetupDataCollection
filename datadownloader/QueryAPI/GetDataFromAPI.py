@@ -18,7 +18,7 @@ import  multiprocessing as mp
 
 class APIDataExtractionFacade:
 
-    def __init__(self,mainfolder,opfolder,config=None,cattofind=None,topic=None,locinfo=None,specificgroups=None):
+    def __init__(self,configfolder,opfolder,config=None,cattofind=None,topic=None,locinfo=None,specificgroups=None):
         self.specificgroupsfile=specificgroups
         self.cattofind=cattofind
         self.topictofind=topic
@@ -39,7 +39,7 @@ class APIDataExtractionFacade:
             raise Exception(" Please Enter a Category or Topic to Extract")
 
 
-        self.meetup_clients=MeetUpClients(configfolder=mainfolder).clients
+        self.meetup_clients=MeetUpClients(configfolder=configfolder).clients
         self.keysatdisposal=len(self.meetup_clients)
         self.opfolder=opfolder
         self.logfile=LoggingUtil(opfolder+'Logs/','Started_API_Extraction_'+str(datetime.now())+'.txt')
@@ -172,55 +172,9 @@ class APIDataExtractionFacade:
 
 
 
-#mainfolder='/home/abhisheksh/PROJECTS/MeetupAPI/'
-#mainfolder='/media/oldmonk/G/CW_Research/TERM11/MSR2018PROJECT/MeetupAPI/'
-#opfolder=mainfolder+'Tech_ALL/'
-#opfolder=mainfolder+'deep-learning/'
-#mainfolder='../'
-#opfolder=mainfolder+'/techall/'
-#opfolder=mainfolder+'/../fitness/'
-#opfolder=mainfolder+'/../sanskrit/'
-
-#print(os.listdir(mainfolder))
-
-#cat='Tech'
-# cat='Fitness'
-#cat = None
-#topictofind='sanskrit'
-#topictofind = None
-#cat=None
-#topictofind='deep-learning'
-#topictofind='python'
-#city='Singapore'
-#country='SG'
-#city_country_state='Singapore|SG|'
-#city_country_state=None
-#apide=APIDataExtractionFacade(mainfolder,opfolder,cattofind=cat,topic=topictofind,locinfo=city_country_state,specificgroups='final_esem_swdevonly_missing_groups_members.csv')
-
-# for i in os.listdir(opfolder+'/Data/Groups'):
-#     spgroups = i
-#     apide=APIDataExtractionFacade(mainfolder,opfolder,cattofind=cat,topic=topictofind,locinfo=city_country_state,specificgroups=spgroups)
-#     apide.StartInfoExtraction()
 
 
 
-mainfolder= os.path.dirname(os.path.realpath(__file__))
-cat = None
-topictofind = 'sanskrit'
-city_country_state = None
-
-if cat:
-    foldername = cat
-elif topictofind:
-    foldername = topictofind
-else:
-    raise ValueError(" Please set a catgeory or topic whose data has to be extracted")
-
-opfolder = mainfolder+'/../../'+ foldername +'/'
-
-
-apide=APIDataExtractionFacade(mainfolder,opfolder,cattofind=cat,topic=topictofind,locinfo=city_country_state,specificgroups=None)
-apide.StartInfoExtraction()
 
 
 
