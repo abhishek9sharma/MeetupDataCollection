@@ -1,10 +1,26 @@
 from jsonprocessor.ConvertData import  ConvertData
+import os
 
 
+cat = None
+catcode = None
+topictofind = 'sanskrit'
+groupfile = None
 
-cat ='Fitness'
-folderpath='../'+ cat  +'/Data/'
-groupfile='Groups/9_None_Groups.csv'
+#Set Topic to Mine
+if cat is None  and topictofind is None:
+    raise ValueError(" Please set a catgeory or topic whose data has to be extracted")
+elif cat:
+    opfolder = cat
+    groupfile='Groups/'+ catcode +'_None_Groups.csv'
+else:
+    opfolder = topictofind
+    groupfile='Groups/None_'+ topictofind +'_Groups.csv'
+
+folderpath= '../' + opfolder  + '/Data/'
+print(os.path.abspath(folderpath))
+
+#groupfile='Groups/9_None_Groups.csv'
 memberfilesfolder='Members/'
 eventfilesfolder='Events/'
 cd=ConvertData(folderpath,groupfile,memberfilesfolder,eventfilesfolder,'',False,True)
