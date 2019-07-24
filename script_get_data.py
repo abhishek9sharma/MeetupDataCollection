@@ -6,7 +6,7 @@ from datadownloader.QueryAPI.GetDataFromAPI import *
 
 
 
-cat = 'Fitness'
+cat = 'Tech'
 topictofind = None
 city_country_state = None #Location Requires City+Country in Case of Non US Locations
 
