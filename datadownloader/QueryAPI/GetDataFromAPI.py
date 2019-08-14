@@ -7,6 +7,7 @@ import  pandas as pd
 from  datadownloader.Utils.Logging import LoggingUtil
 from datetime import  datetime
 from datadownloader.APIClient.MeetupClients import MeetUpClients
+#from datadownloader.APIClient.OAuthMeetupClients import MeetUpClients
 from datadownloader.QueryAPI.ExtractGroupInfo import GroupInfoExtractor as GrpExt
 from datadownloader.QueryAPI.ExtractCategoryInfo import CategoryInfoExtractor as CatExt
 from datadownloader.QueryAPI.ExtractEventInfo import EventInfoExtractor as EventExt
@@ -18,7 +19,7 @@ import  multiprocessing as mp
 
 class APIDataExtractionFacade:
 
-    def __init__(self,configfolder,opfolder,config=None,cattofind=None,topic=None,locinfo=None,specificgroups=None):
+    def __init__(self,configfolder, opfolder, confifgfile = 'MeetupKeys2.json',cattofind=None,topic=None,locinfo=None,specificgroups=None):
         self.specificgroupsfile=specificgroups
         self.cattofind=cattofind
         self.topictofind=topic
@@ -39,7 +40,7 @@ class APIDataExtractionFacade:
             raise Exception(" Please Enter a Category or Topic to Extract")
 
 
-        self.meetup_clients=MeetUpClients(configfolder=configfolder).clients
+        self.meetup_clients= MeetUpClients(configfolder, confifgfile).clients
         self.keysatdisposal=len(self.meetup_clients)
         self.opfolder=opfolder
         self.logfile=LoggingUtil(opfolder+'Logs/','Started_API_Extraction_'+str(datetime.now())+'.txt')

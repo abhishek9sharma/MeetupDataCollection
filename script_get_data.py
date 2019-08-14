@@ -6,8 +6,12 @@ from datadownloader.QueryAPI.GetDataFromAPI import *
 
 
 
-cat = 'Tech'
-topictofind = None
+#cat = 'Tech'
+#topictofind = None
+
+cat = None
+topictofind = 'sanskrit'
+
 city_country_state = None #Location Requires City+Country in Case of Non US Locations
 
 #Set Topic to Mine
@@ -45,7 +49,9 @@ except :
 
 #configfolder= os.path.dirname(os.path.realpath(__file__))
 configfolder = None
+configfile = 'MeetupKeys3.json'
 #opfolder ='data/'
 
-apide=APIDataExtractionFacade(configfolder,opfolder,cattofind=cat,topic=topictofind,locinfo=city_country_state,specificgroups=None)
+apide=APIDataExtractionFacade(configfolder,opfolder,configfile, cattofind=cat,topic=topictofind,locinfo=city_country_state,specificgroups=None)
+#apide = APIDataExtractionFacade(configfolder, opfolder, configfile)
 apide.StartInfoExtraction()
