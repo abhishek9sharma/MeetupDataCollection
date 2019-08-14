@@ -11,6 +11,7 @@ class MemberInfoExtractor:
 
     def __init__(self,meetupclients):
         self.meetupclients=meetupclients
+        self.num_of_clients = len(meetupclients)
         self.traceinfo=[]
 
 
@@ -24,7 +25,7 @@ class MemberInfoExtractor:
         group_url_in=grpinfo[0][1]
         opfolder=grpinfo[2]
         reprocess=grpinfo[3]
-        clinfo=self.meetupclients[int(grpinfo[1]%7)]
+        clinfo=self.meetupclients[int(grpinfo[1]%self.num_of_clients)]
         mtupcl=clinfo[1]
 
         if(reprocess):
@@ -100,7 +101,7 @@ class MemberInfoExtractor:
 
     def ExtractParallell(self,methodname,list_to_process):
 
-        mpool=mp.Pool(7)
+        mpool=mp.Pool(self.num_of_clients)
         #print(len(allgroups_ids_urls))
         processedresults=mpool.map(methodname,list_to_process)
         mpool.close()

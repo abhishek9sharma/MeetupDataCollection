@@ -51,6 +51,7 @@ except :
 configfolder = None
 configfile = 'MeetupKeys3.json'
 #opfolder ='data/'
+#num_of_clients = 2
 
 apide=APIDataExtractionFacade(configfolder,opfolder,configfile, cattofind=cat,topic=topictofind,locinfo=city_country_state,specificgroups=None)
 #apide = APIDataExtractionFacade(configfolder, opfolder, configfile)

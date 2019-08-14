@@ -9,6 +9,7 @@ class EventInfoExtractor:
 
     def __init__(self,meetupclients):
         self.meetupclients=meetupclients
+        self.num_of_clients = len(meetupclients)
         self.traceinfo=[]
 
 
@@ -22,7 +23,7 @@ class EventInfoExtractor:
         group_url_in=grpinfo[0][1]
         opfolder=grpinfo[2]
         reprocess=grpinfo[3]
-        clinfo=self.meetupclients[int(grpinfo[1]%7)]
+        clinfo=self.meetupclients[int(grpinfo[1]%self.num_of_clients)]
         mtupcl=clinfo[1]
 
         if(reprocess):
@@ -102,7 +103,7 @@ class EventInfoExtractor:
         currmethodtrace=[]
         group_id_in=grpinfo[0][0]
         group_url_in=grpinfo[0][1]
-        clinfo=self.meetupclients[int(grpinfo[1]%7)]
+        clinfo=self.meetupclients[int(grpinfo[1]%self.num_of_clients)]
         mtupcl=clinfo[1]
         logstr= " Intialized client : " + str(clinfo[0])+ " :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
         #currmethodtrace=logstr+"\n"
@@ -127,7 +128,7 @@ class EventInfoExtractor:
 
     def ExtractParallell(self,methodname,list_to_process):
 
-        eventpool=mp.Pool(7)
+        eventpool=mp.Pool(self.num_of_clients)
         #print(len(allgroups_ids_urls))
         processedresults=eventpool.map(methodname,list_to_process)
         eventpool.close()

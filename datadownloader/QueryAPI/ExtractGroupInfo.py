@@ -7,6 +7,7 @@ from functools import  partial
 class GroupInfoExtractor:
     def __init__(self,meetupclients):
         self.meetupclients=meetupclients
+        self.num_of_clients = len(meetupclients)
         #self.FindNumberOfGroups()
 
 
@@ -35,7 +36,7 @@ class GroupInfoExtractor:
         countryIN=grpinfo[4]
         cityIN=grpinfo[5]
         opfolder=grpinfo[6]
-        cl=self.meetupclients[int(offsetid%7)]
+        cl=self.meetupclients[int(offsetid%self.num_of_clients)]
         logstr=" Invoked Client " + str(cl[0])
         #currmethodtrace=logstr+"\n"
         print(logstr)
