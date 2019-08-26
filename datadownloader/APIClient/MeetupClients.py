@@ -11,7 +11,7 @@ import  ast
 from requests_oauthlib import OAuth2Session
 
 class MeetUpClients:
-    def __init__(self, configfolder=None, configfile = 'MeetupKeys2.json'):
+    def __init__(self, configfolder=None, configfile = 'MeetupKeys3.json'):
         self.configfolder=configfolder
         self.configfile = configfile
         if(self.configfolder is not  None):

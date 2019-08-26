@@ -4,7 +4,7 @@ import os
 
 cat = None
 catcode = None
-topictofind = 'sanskrit'
+topictofind = 'julia'
 groupfile = None
 
 #Set Topic to Mine

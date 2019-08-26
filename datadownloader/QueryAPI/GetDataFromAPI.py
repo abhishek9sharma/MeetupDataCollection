@@ -11,6 +11,8 @@ from datadownloader.APIClient.MeetupClients import MeetUpClients
 from datadownloader.QueryAPI.ExtractGroupInfo import GroupInfoExtractor as GrpExt
 from datadownloader.QueryAPI.ExtractCategoryInfo import CategoryInfoExtractor as CatExt
 from datadownloader.QueryAPI.ExtractEventInfo import EventInfoExtractor as EventExt
+from datadownloader.QueryAPI.ExtractEventDetails import EventInfoExtractor as EventDet
+
 from datadownloader.QueryAPI.ExtractMemberInfo import MemberInfoExtractor as MembExt
 
 import os
@@ -169,8 +171,15 @@ class APIDataExtractionFacade:
         #self._event_info_extractor.ExtractEventCountsRecursive(self.allgroups_ids_urls_full[0:7],self.opfolder)
 
 
-
-
+    def ExtractEventDetails(self,event_details):
+        #print(event_details)
+        events_to_process = [(row['id'],row['event_url'].split('/')[3]) for idx,row in event_details.iterrows()]
+        self._event_det_extractor = EventDet(self.meetup_clients)
+        self._event_det_extractor.GetEventDetails(events_to_process)
+        # for idx, row in event_details.iterrows():
+        #     event_id = row['id']
+        #     event_url = row['event_url'].split('/')[3]
+        #     self._event_det_extractor.GetEventRSVPDetails(event_id, event_url)
 
 
 

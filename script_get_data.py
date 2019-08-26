@@ -10,7 +10,7 @@ from datadownloader.QueryAPI.GetDataFromAPI import *
 #topictofind = None
 
 cat = None
-topictofind = 'sanskrit'
+topictofind = 'julia'
 
 city_country_state = None #Location Requires City+Country in Case of Non US Locations
 
