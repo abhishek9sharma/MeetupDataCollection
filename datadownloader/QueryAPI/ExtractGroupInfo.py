@@ -64,13 +64,13 @@ class GroupInfoExtractor:
             groupinfo=mtupcl.GetGroups(category_id=categoryid,city=cityIN,country=countryIN,topic=tpc,page=200,offset=offsetid)
             numofgroups=len(groupinfo.results)
             if(reprocess):
-                logstr="Total meetup groups found while reprocessing for offset  " + str(offsetid) + " are "+ str(numofgroups)
+                logstr="Total meetup groups found while reprocessing for offset  " + str(offsetid) + " are "+ str(numofgroups) + " using client" + str(cl[0])
                 currmethodtrace=logstr+"\n"
-                print(logstr)
+                #print(logstr)
             else:
-                logstr="Total meetup groups found for offset  " + str(offsetid) + " are "+ str(numofgroups)
+                logstr="Total meetup groups found for offset  " + str(offsetid) + " are "+ str(numofgroups) + " using client" + str(cl[0])
             currmethodtrace=logstr+"\n"
-            print(logstr)
+            #print(logstr)
 
             if(numofgroups>0):
                 #techgroups+=groupinfo.results
@@ -81,7 +81,7 @@ class GroupInfoExtractor:
             else:
                 logstr="No groups found for offset " + str(offsetid)
                 currmethodtrace=logstr+"\n"
-                print(logstr)
+                #print(logstr)
                 return (None,currmethodtrace,offsetid,grpinfo)
             #print(type(groupinfo.results))
             print()
@@ -90,17 +90,17 @@ class GroupInfoExtractor:
             return  (groupinfo.results,currmethodtrace,offsetid,grpinfo)
         except:
                 if(reprocess):
-                    logstr="Exception Occured for Offset while reprocessing : " + str(offsetid)
+                    logstr="Exception Occured for Offset while reprocessing : " + str(offsetid)+ " using client" + str(cl[0])
                     currmethodtrace=logstr+"\n"
-                    print(logstr)
+                    #print(logstr)
 
                 else:
-                    logstr="Exception Occured for Offset : " + str(offsetid)
+                    logstr="Exception Occured for Offset : " + str(offsetid) + " using client" + str(cl[0])
                     currmethodtrace=logstr+"\n"
-                    print(logstr)
+                    #print(logstr)
 
                 #offsetswhichwhentintoexception.append(offsetid)
-                print(logstr)
+                #print(logstr)
                 return (None,currmethodtrace,offsetid,grpinfo)
 
 
@@ -120,9 +120,15 @@ class GroupInfoExtractor:
 
 
     def ExtractGroupsOfCategoryRecursive(self,categoryid,topic,country,city,opfolder, totalgroupsincat = None):
+        log_trace_till_now = ""
         totalgroupsincat=self.FindNumberOfGroups(categoryid,topic,country,city)
         offsetsmax=int(totalgroupsincat/200)+1
         offsetsrange=list(range(offsetsmax+1))
+
+        logstr = "Total Number of Offsets::" + str(offsetsmax) +"\n"
+        #print(logstr)
+        log_trace_till_now += logstr
+
         #logstr="Total Number of Offsets::" + str(offsetsmax)
         #self.logfile.Log(logstr)
         #print(logstr)
@@ -141,7 +147,8 @@ class GroupInfoExtractor:
         techgroups=self.ExtractGroupInfoParalallel(offsetlist)
 
 
-
+        logstr = " ".join([g[1] for g in techgroups])
+        log_trace_till_now += logstr
 
         reprcount=0
         offsetswhichwhentintoexception=[g[3] for g in techgroups  if("Exception Occured " in g[1])]
@@ -154,7 +161,12 @@ class GroupInfoExtractor:
             techgroupsall=techgroupsall+succrepoffsets
             reprcount+=1
 
+        logstr = "After REPROCESSING\n"
+        #print(logstr)
+        log_trace_till_now+=logstr
 
+        logstr = " ".join([g[1] for g in techgroupsall])
+        log_trace_till_now+=logstr
 
 
         '''
@@ -173,12 +185,16 @@ class GroupInfoExtractor:
             #del techgroups[eo]
             techgroups.append(FindGroups(eo,reprocess=True))
         '''
-
         print(len(techgroupsall))
         techgroupsall_new=[gi for g in techgroupsall if(g[0] is not None) for gi in g[0] ]
         group_pd=pd.read_json(json.dumps(techgroupsall_new))
-        group_pd.to_csv(opfolder+"Data/Groups/"+str(categoryid)+'_'+str(topic)+'_Groups.csv',index=False)
-        return group_pd
+        group_file = opfolder+"Data/Groups/"+str(categoryid)+'_'+str(topic)+'_Groups.csv'
+        group_pd.to_csv(group_file,index=False)
+
+        logstr = " csv file with " + str(group_pd.shape[0]) + " groups written to location " + str(group_file) +"\n"
+        print(logstr)
+        log_trace_till_now += logstr
+        return group_pd, log_trace_till_now
 
 
 

@@ -21,31 +21,42 @@ import  multiprocessing as mp
 
 class APIDataExtractionFacade:
 
-    def __init__(self,configfolder, opfolder, confifgfile = 'MeetupKeys2.json',cattofind=None,topic=None,locinfo=None,specificgroups=None):
+    def __init__(self,configfolder, opfolder, confifgfile = 'MeetupKeys3.json',cattofind=None,topic=None,locinfo=None,specificgroups=None):
+        self.logfile = LoggingUtil(opfolder + 'Logs/', 'Started_API_Extraction_' + str(datetime.now()) + '.txt')
+
         self.specificgroupsfile=specificgroups
         self.cattofind=cattofind
         self.topictofind=topic
+        logstr = "Category to find is ::" + str(self.cattofind) +  ", topic to find is ::  " + str(self.topictofind)
+        self.logfile.Log(logstr)
+
         if(locinfo is not None):
             locinfo_list=locinfo.split('|')
             if(len(locinfo)<2):
-                raise Exception(" Location Requires City+Country in Case of Non US Locations")
+                logstr = "EX OCCURED : Location Requires City+Country in Case of Non US Locations"
+                self.logfile.Log(logstr)
+                raise Exception(logstr)
             self.city= locinfo_list[0]
             self.country= locinfo_list[1]
             self.state=locinfo_list[2]
             if(self.country=='US' and (len(locinfo)<3 or self.state=='')):
-                raise Exception(" Location Requires City+Country+State  in Case of Non US Locations")
+                logstr = "Location Requires City+Country in Case of Non US Locations"
+                self.logfile.Log(logstr)
+                raise Exception(logstr)
         else:
             self.country=self.city=self.state=None
 
         self.group_pd=None
         if(self.cattofind is None and self.topictofind is None):
-            raise Exception(" Please Enter a Category or Topic to Extract")
+            logstr = "EX OCCURED :  : Please Enter a Category or Topic to Extract"
+            self.logfile.Log(logstr)
+            raise Exception(logstr)
 
 
         self.meetup_clients= MeetUpClients(configfolder, confifgfile).clients
         self.keysatdisposal=len(self.meetup_clients)
         self.opfolder=opfolder
-        self.logfile=LoggingUtil(opfolder+'Logs/','Started_API_Extraction_'+str(datetime.now())+'.txt')
+        #self.logfile=LoggingUtil(opfolder+'Logs/','Started_API_Extraction_'+str(datetime.now())+'.txt')
 
 
     def Log(self,logstr):
@@ -66,29 +77,29 @@ class APIDataExtractionFacade:
             self.ExtractGroupInfo()
 
 
-            if(self.group_pd is None):
-                if(self.specificgroupsfile is not None):
-                    self.group_pd=pd.read_csv(opfolder+'Data/Groups/'+self.specificgroupsfile)
-                else:
-                    self.group_pd=pd.read_csv(opfolder+'Data/Groups/'+str(self.cattofind_id)+'_'+str(self.topictofind)+'_Groups.csv')
-            groups_to_process=self.group_pd
-            #groups_to_process=self.group_pd[self.group_pd['city']=='Singapore']
-            self.allgroups_ids_urls_full=list(zip(groups_to_process.id,groups_to_process.urlname))
-            groups_already_processed_for_members=[int(i.split('_')[0]) for i in os.listdir(self.opfolder +'Data/Members/')]
-
-            if(self.specificgroupsfile is not None):
-                    groups_to_be_reprocessed=self.allgroups_ids_urls_full
-            else:
-                groups_to_be_reprocessed=[gf for gf in self.allgroups_ids_urls_full if(gf[0] not in groups_already_processed_for_members)]
-            print("Debug")
-            print(groups_to_be_reprocessed)
-            print(len(groups_to_be_reprocessed))
-            self.allgroups_ids_urls_full=groups_to_be_reprocessed
-
-
-
-            self.ExtractEventInfo()
-            self.ExtractMemberInfo()
+            # if(self.group_pd is None):
+            #     if(self.specificgroupsfile is not None):
+            #         self.group_pd=pd.read_csv(opfolder+'Data/Groups/'+self.specificgroupsfile)
+            #     else:
+            #         self.group_pd=pd.read_csv(opfolder+'Data/Groups/'+str(self.cattofind_id)+'_'+str(self.topictofind)+'_Groups.csv')
+            # groups_to_process=self.group_pd
+            # #groups_to_process=self.group_pd[self.group_pd['city']=='Singapore']
+            # self.allgroups_ids_urls_full=list(zip(groups_to_process.id,groups_to_process.urlname))
+            # groups_already_processed_for_members=[int(i.split('_')[0]) for i in os.listdir(self.opfolder +'Data/Members/')]
+            #
+            # if(self.specificgroupsfile is not None):
+            #         groups_to_be_reprocessed=self.allgroups_ids_urls_full
+            # else:
+            #     groups_to_be_reprocessed=[gf for gf in self.allgroups_ids_urls_full if(gf[0] not in groups_already_processed_for_members)]
+            # print("Debug")
+            # print(groups_to_be_reprocessed)
+            # print(len(groups_to_be_reprocessed))
+            # self.allgroups_ids_urls_full=groups_to_be_reprocessed
+            #
+            #
+            #
+            # self.ExtractEventInfo()
+            # self.ExtractMemberInfo()
 
         except Exception as e:
             print("Exception Occured")
@@ -97,10 +108,13 @@ class APIDataExtractionFacade:
 
     def ExtractGroupInfo(self):
         self._group_info_extractor=GrpExt(self.meetup_clients)
-        totalgroupsincat=self._group_info_extractor.FindNumberOfGroups(self.cattofind_id,self.topictofind,self.country,self.city)
-        logstr=" Total Number of Groups Present in category " + str(self.cattofind)+ "  and/or topics " +str(self.topictofind) + " :: "+ str(totalgroupsincat)
+        logstr = "Finding number of groups for category " + str(self.cattofind) +  " and topic to find is ::  " + str(self.topictofind) +"\n"
         self.Log(logstr)
-        self.group_pd=self._group_info_extractor.ExtractGroupsOfCategoryRecursive(self.cattofind_id,self.topictofind,self.country,self.city,self.opfolder, totalgroupsincat)
+        totalgroupsincat = self._group_info_extractor.FindNumberOfGroups(self.cattofind_id,self.topictofind,self.country,self.city)
+        logstr = "Total Number of Groups Present in category " + str(self.cattofind)+ "  and/or topics " +str(self.topictofind) + " :: "+ str(totalgroupsincat)
+        self.Log(logstr)
+        self.group_pd, methodlogtrace = self._group_info_extractor.ExtractGroupsOfCategoryRecursive(self.cattofind_id,self.topictofind,self.country,self.city,self.opfolder, totalgroupsincat)
+        self.Log(methodlogtrace)
 
 
     def ExtractCategoryInfo(self):
