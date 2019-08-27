@@ -29,9 +29,9 @@ class MemberInfoExtractor:
         mtupcl=clinfo[1]
 
         if(reprocess):
-            logstr= " Intialized client Reprocess Mode : " + str(clinfo[0])+ " :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+            logstr= " Intialized client Reprocess Mode : " + str(clinfo[0])+ " :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)+ " using client " + str(clinfo[0])
         else:
-            logstr= " Intialized client : " + str(clinfo[0])+ " :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+            logstr= " Intialized client : " + str(clinfo[0])+ " :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)+ " using client " + str(clinfo[0])
         #currmethodtrace=logstr+"\n"
         currmethodtrace.append(logstr)
         print(logstr)
@@ -39,7 +39,7 @@ class MemberInfoExtractor:
         grp_member_info=[]
         try:
             totalmembers_grp=mtupcl.GetMembers(group_id=group_id_in,page=1,offset=1).meta['total_count']
-            logstr=str(totalmembers_grp)+ " are the Total members present :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+            logstr=str(totalmembers_grp)+ " are the Total members present :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)+ " using client " + str(clinfo[0])
             currmethodtrace.append(logstr)
             print(logstr)
 
@@ -48,12 +48,12 @@ class MemberInfoExtractor:
                 offsetrange=int(totalmembers_grp/200)+1
 
                 if(reprocess):
-                    logstr= " Reprocessing For   :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+                    logstr= " Reprocessing For   :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)+ " using client " + str(clinfo[0])
                     print(logstr)
                     currmethodtrace.append(logstr)
 
                 else:
-                    logstr= " Processing For   :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+                    logstr= " Processing For   :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)+ " using client " + str(clinfo[0])
                     print(logstr)
                     currmethodtrace.append(logstr)
                     #Extract All MEMBERS for a Group
@@ -62,7 +62,7 @@ class MemberInfoExtractor:
                     if(len(curroffset_member_info)>0):
                         grp_member_info+=curroffset_member_info
                     else:
-                        logstr= " No members found for offset id  " + str(offsetid)  +" :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+                        logstr= " No members found for offset id  " + str(offsetid)  +" :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)+ " using client " + str(clinfo[0])
                         print(logstr)
                         break
 
@@ -76,16 +76,16 @@ class MemberInfoExtractor:
                 else:
                     pd.read_json(json.dumps(grp_member_info)).to_csv(opfolder+"Data/Members/"+str(group_id_in)+'_Members.csv',index=False)
 
-                logstr=str(len(grp_member_info))+ " are the Total members extracted  :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+                logstr=str(len(grp_member_info))+ " are the Total members extracted  :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)+ " using client " + str(clinfo[0])
                 currmethodtrace.append(logstr)
                 print(logstr)
             else:
-                logstr=str(totalmembers_grp)+ " are the Total members extracted  :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+                logstr=str(totalmembers_grp)+ " are the Total members extracted  :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)+ " using client " + str(clinfo[0])
                 currmethodtrace.append(logstr)
 
 
         except:
-            logstr=" Exception Occured  " + str(sys.exc_info()[0]) + "for GROUP #" + str(group_url_in)  + "# with group id #" + str(group_id_in)
+            logstr=" Exception Occured  " + str(sys.exc_info()[0]) + "for GROUP #" + str(group_url_in)  + "# with group id #" + str(group_id_in)+ " using client " + str(clinfo[0])
             currmethodtrace.append(logstr)
             print(logstr)
             return (currmethodtrace,[group_id_in,group_url_in])

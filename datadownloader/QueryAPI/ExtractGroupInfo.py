@@ -66,11 +66,11 @@ class GroupInfoExtractor:
             if(reprocess):
                 logstr="Total meetup groups found while reprocessing for offset  " + str(offsetid) + " are "+ str(numofgroups) + " using client" + str(cl[0])
                 currmethodtrace=logstr+"\n"
-                #print(logstr)
+                print(logstr)
             else:
                 logstr="Total meetup groups found for offset  " + str(offsetid) + " are "+ str(numofgroups) + " using client" + str(cl[0])
             currmethodtrace=logstr+"\n"
-            #print(logstr)
+            print(logstr)
 
             if(numofgroups>0):
                 #techgroups+=groupinfo.results
@@ -81,7 +81,7 @@ class GroupInfoExtractor:
             else:
                 logstr="No groups found for offset " + str(offsetid)
                 currmethodtrace=logstr+"\n"
-                #print(logstr)
+                print(logstr)
                 return (None,currmethodtrace,offsetid,grpinfo)
             #print(type(groupinfo.results))
             print()
@@ -92,12 +92,12 @@ class GroupInfoExtractor:
                 if(reprocess):
                     logstr="Exception Occured for Offset while reprocessing : " + str(offsetid)+ " using client" + str(cl[0])
                     currmethodtrace=logstr+"\n"
-                    #print(logstr)
+                    print(logstr)
 
                 else:
                     logstr="Exception Occured for Offset : " + str(offsetid) + " using client" + str(cl[0])
                     currmethodtrace=logstr+"\n"
-                    #print(logstr)
+                    print(logstr)
 
                 #offsetswhichwhentintoexception.append(offsetid)
                 #print(logstr)
@@ -126,7 +126,7 @@ class GroupInfoExtractor:
         offsetsrange=list(range(offsetsmax+1))
 
         logstr = "Total Number of Offsets::" + str(offsetsmax) +"\n"
-        #print(logstr)
+        print(logstr)
         log_trace_till_now += logstr
 
         #logstr="Total Number of Offsets::" + str(offsetsmax)
@@ -153,20 +153,29 @@ class GroupInfoExtractor:
         reprcount=0
         offsetswhichwhentintoexception=[g[3] for g in techgroups  if("Exception Occured " in g[1])]
         techgroupsall=[g for g in techgroups  if("Exception Occured " not in g[1])]
+        reprocesslist = []
 
         while(reprcount<5 and len(offsetswhichwhentintoexception)>0):
             reppffsets=self.ExtractGroupInfoParalallel(offsetswhichwhentintoexception)
             offsetswhichwhentintoexception=[g[3] for g in reppffsets  if("Exception Occured " in g[1])]
             succrepoffsets=[g for g in reppffsets  if("Exception Occured " not in g[1])]
+            reprocesslist = reprocesslist + succrepoffsets
             techgroupsall=techgroupsall+succrepoffsets
             reprcount+=1
 
-        logstr = "After REPROCESSING\n"
-        #print(logstr)
+
+
+        logstr = "Checking REPROCESSING\n"
+        print(logstr)
         log_trace_till_now+=logstr
 
-        logstr = " ".join([g[1] for g in techgroupsall])
-        log_trace_till_now+=logstr
+        if len(techgroupsall)>len(techgroups):
+
+            logstr = "some groups reprocessed \n" + " ".join([g[1] for g in reprocesslist])
+            log_trace_till_now+=logstr
+        else:
+            logstr = "No groups reprocessed \n"
+            log_trace_till_now+=logstr
 
 
         '''
