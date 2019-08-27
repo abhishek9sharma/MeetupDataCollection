@@ -99,7 +99,7 @@ class APIDataExtractionFacade:
 
 
 
-            # self.ExtractEventInfo()
+            self.ExtractEventInfo()
             self.ExtractMemberInfo()
 
         except Exception as e:
@@ -139,12 +139,16 @@ class APIDataExtractionFacade:
         self._event_info_extractor=EventExt(self.meetup_clients)
         exceptiongroups=[]
         grp_ids_to_process=self.allgroups_ids_urls_full
-        (EventCountsSuc,EventCountsFailed)=self._event_info_extractor.ExtractEventCountsRecursive(grp_ids_to_process,self.opfolder)
+        (EventCountsSuc,EventCountsFailed,methodlogtrace)=self._event_info_extractor.ExtractEventCountsRecursive(grp_ids_to_process,self.opfolder)
+        self.Log(methodlogtrace, prnt=False)
+
         print(" Successful events counts found for groups " + str(len(EventCountsSuc)) + " among total groups "+  str(len(grp_ids_to_process)))
         print(" Events for which event count calculation failed are  " + str(len(EventCountsFailed)) + " among total groups "+  str(len(grp_ids_to_process)))
 
 
         (EventIdsSuc,trace,groups_went_into_exception)=self._event_info_extractor.ExtractGroupEventsRecursive(grp_ids_to_process,self.opfolder)
+        self.Log(trace, prnt=False)
+
         print(" Successful events found are " + str(len(EventIdsSuc)) + " among total groups "+  str(len(grp_ids_to_process)))
         print(" Events for which event extraction failes are  " + str(len(groups_went_into_exception)) + " among total groups "+  str(len(grp_ids_to_process)))
 

@@ -27,9 +27,9 @@ class EventInfoExtractor:
         mtupcl=clinfo[1]
 
         if(reprocess):
-            logstr= " Intialized client Reprocess Mode : " + str(clinfo[0])+ " :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+            logstr= " Intialized client Reprocess Mode : " + str(clinfo[0])+ " :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)+" using client " + str(clinfo[0])
         else:
-            logstr= " Intialized client : " + str(clinfo[0])+ " :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+            logstr= " Intialized client : " + str(clinfo[0])+ " :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)+" using client " + str(clinfo[0])
         #currmethodtrace=logstr+"\n"
         currmethodtrace.append(logstr)
         print(logstr)
@@ -37,7 +37,6 @@ class EventInfoExtractor:
         grp_event_info=[]
         try:
             totalevents_grp=mtupcl.GetEvents(group_id=group_id_in,page=1,offset=1,status="past").meta['total_count']
-            logstr=str(totalevents_grp)+ " are the Total events present :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
             currmethodtrace.append(logstr)
             print(logstr)
 
@@ -46,12 +45,12 @@ class EventInfoExtractor:
                 offsetrange=int(totalevents_grp/200)+1
 
                 if(reprocess):
-                    logstr= " Reprocessing For   :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+                    logstr= " Reprocessing For   :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)+" using client " + str(clinfo[0])
                     print(logstr)
                     currmethodtrace.append(logstr)
 
                 else:
-                    logstr= " Processing For   :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+                    logstr= " Processing For   :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)+" using client " + str(clinfo[0])
                     print(logstr)
                     currmethodtrace.append(logstr)
 
@@ -63,7 +62,7 @@ class EventInfoExtractor:
                     if(len(curroffset_event_info)>0):
                         grp_event_info+=curroffset_event_info
                     else:
-                        logstr= " No events found for offset id  " + str(offsetid)  +" :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+                        logstr= " No events found for offset id  " + str(offsetid)  +" :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)+" using client " + str(clinfo[0])
                         print(logstr)
                         break
 
@@ -80,7 +79,7 @@ class EventInfoExtractor:
                 else:
                     pd.read_json(json.dumps(grp_event_info)).to_csv(opfolder+"Data/Events/"+str(group_id_in)+'_Events.csv',index=False)
 
-                logstr=str(len(grp_event_info))+ " are the Total events extracted  :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+                logstr=str(len(grp_event_info))+ " are the Total events extracted  :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)+" using client " + str(clinfo[0])
                 currmethodtrace.append(logstr)
                 print(logstr)
             else:
@@ -114,7 +113,7 @@ class EventInfoExtractor:
         totalevents_grp=0
         try:
             totalevents_grp=mtupcl.GetEvents(group_id=group_id_in,page=200,offset=0,status="past").meta['total_count']
-            logstr=str(totalevents_grp)+ " are the Total events present :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in)
+            logstr=str(totalevents_grp)+ " are the Total events present :: for GROUP |" + str(group_url_in)  + "| with group id " + str(group_id_in) +" using client " + str(clinfo[0])
             currmethodtrace.append(logstr)
             print(logstr)
         except:
@@ -143,38 +142,84 @@ class EventInfoExtractor:
 
 
     def ExtractEventCountsRecursive(self,allgroups_ids_urls_full,opfolder):
+        log_trace_till_now = ""
+        logstr = "  Starting event extraction for " + str(len(allgroups_ids_urls_full)) + "  events "
+        print(logstr)
+        log_trace_till_now+=logstr
+
+
+
         exceptiongroups=[]
 
         listtoprocess=zip(allgroups_ids_urls_full,range(len(allgroups_ids_urls_full)))
         EventCounts=self.ExtractParallell(self.GetEventCountOfGroup,listtoprocess)
 
+        #logstr = " ".join([g[1] for g in EventCounts])
+        logstr = "\n".join([" ".join([ i for i in g[1]]) for g in EventCounts])
+        log_trace_till_now += logstr
+
         exceptiongroups=[i[2] for i in EventCounts if("Exception Occured " in "\n".join(i[1]))]
         SuccessfulGroups=[i for i in EventCounts if("Exception Occured " not in "\n".join(i[1]))]
 
+
+
         reprocesscount=0
+        repgroups = []
 
         while(len(exceptiongroups)>0 and reprocesscount<5):
              listtoprocess=zip(exceptiongroups,range(len(exceptiongroups)))
              reprocessgroups=self.ExtractParallell(self.GetEventCountOfGroup,listtoprocess)
              exceptiongroups=[i[2] for i in reprocessgroups if("Exception Occured " in "\n".join(i[1]))]
              reproces_suceeeded_groups=[i for i in reprocessgroups if("Exception Occured " not in "\n".join(i[1]))]
+             repgroups  = repgroups + reproces_suceeeded_groups
              SuccessfulGroups=SuccessfulGroups+reproces_suceeeded_groups
              reprocesscount+=1
 
 
-        foutsg=open(opfolder+"Data/events.csv",'a')
+        logstr = "Checking REPROCESSING\n"
+        print(logstr)
+        log_trace_till_now+=logstr
+
+        if len(repgroups)>0:
+
+            logstr = "some groups reprocessed \n" +"\n".join([" ".join([ i for i in g[1]]) for g in repgroups])
+            log_trace_till_now+=logstr
+        else:
+            logstr = "No groups reprocessed \n"
+            log_trace_till_now+=logstr
+
+
+
+        # Groups for which event count was determined
+        suceventscountfile = opfolder+"Data/events.csv"
+        foutsg=open(suceventscountfile,'a')
         for sg in SuccessfulGroups:
             foutsg.write(str(sg[2][0])+","+str(sg[0])+"\n")
         foutsg.close()
 
-        fout_ex=open(opfolder+"Data/events_count_failed.csv",'a')
+        logstr = " csv file with " + str(len(SuccessfulGroups)) + " events written to location " + str(suceventscountfile) + "\n"
+        print(logstr)
+        log_trace_till_now += logstr
+
+
+
+        # Groups for which event count was not determined
+        excpevntfile = opfolder+"Data/events_count_failed.csv"
+        fout_ex=open(excpevntfile,'a')
         for fg in exceptiongroups:
-            fout_ex.write(fg.write(str(i[2][0])+","+str(i-1)+"\n"))
+            fout_ex.write(fg.write(str(i[2][0]) + "," + str(i - 1) + "\n"))
+
         fout_ex.close()
+
+        logstr = " csv file with " + str(len(exceptiongroups)) + " events written to location " + str(excpevntfile)+  "\n"
+        print(logstr)
+        log_trace_till_now += logstr
 
         print(" Counts Extracted For Groups " + str(len(SuccessfulGroups)))
         print(" Counts Extraction failed For Groups " + str(len(exceptiongroups)))
-        return (SuccessfulGroups,exceptiongroups)
+
+
+        return (SuccessfulGroups,exceptiongroups,log_trace_till_now)
 
 
 
@@ -254,7 +299,7 @@ class EventInfoExtractor:
         print(logstr)
         logstr= " Total Uniq Events found across " + str(totalgroups_filtered) + " groupa are " + str(len(UniqEvents))
         print(logstr)
-        return (EventIds,self.traceinfo,groups_went_into_exception)
+        return (EventIds," ".join(self.traceinfo),groups_went_into_exception)
 
 
 
