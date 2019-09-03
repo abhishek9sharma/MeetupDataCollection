@@ -23,12 +23,13 @@ class APIDataExtractionFacade:
 
     def __init__(self,configfolder, opfolder, confifgfile = 'MeetupKeys3.json',cattofind=None,topic=None,locinfo=None,specificgroups=None):
         self.logfile = LoggingUtil(opfolder + 'Logs/', 'Started_API_Extraction_' + str(datetime.now()) + '.txt')
-
+        self.opfolder = opfolder
         self.specificgroupsfile=specificgroups
         self.cattofind=cattofind
         self.topictofind=topic
         logstr = "Category to find is ::" + str(self.cattofind) +  ", topic to find is ::  " + str(self.topictofind)
         self.logfile.Log(logstr)
+        self.grp_ids_to_process_filtered = None
 
         if(locinfo is not None):
             locinfo_list=locinfo.split('|')
@@ -65,42 +66,45 @@ class APIDataExtractionFacade:
         self.logfile.Log(logstr)
 
 
-    def StartInfoExtraction(self):
+    def StartInfoExtraction(self, groups= True, members= True, events= True):
         try:
 
-
-            if(self.cattofind is not  None):
-                self.ExtractCategoryInfo()
-            else:
-                self.cattofind_id=None
-            # self.cattofind_id=9
-
-            self.ExtractGroupInfo()
-
-
-            if(self.group_pd is None):
-                if(self.specificgroupsfile is not None):
-                    self.group_pd=pd.read_csv(opfolder+'Data/Groups/'+self.specificgroupsfile)
+            if groups:
+                if(self.cattofind is not  None):
+                    self.ExtractCategoryInfo()
                 else:
-                    self.group_pd=pd.read_csv(opfolder+'Data/Groups/'+str(self.cattofind_id)+'_'+str(self.topictofind)+'_Groups.csv')
-            groups_to_process=self.group_pd
-            #groups_to_process=self.group_pd[self.group_pd['city']=='Singapore']
-            self.allgroups_ids_urls_full=list(zip(groups_to_process.id,groups_to_process.urlname))
-            groups_already_processed_for_members=[int(i.split('_')[0]) for i in os.listdir(self.opfolder +'Data/Members/')]
+                    self.cattofind_id=None
+                # self.cattofind_id=9
 
-            if(self.specificgroupsfile is not None):
-                    groups_to_be_reprocessed=self.allgroups_ids_urls_full
-            else:
-                groups_to_be_reprocessed=[gf for gf in self.allgroups_ids_urls_full if(gf[0] not in groups_already_processed_for_members)]
-            print("Debug")
-            print(groups_to_be_reprocessed)
-            print(len(groups_to_be_reprocessed))
-            self.allgroups_ids_urls_full=groups_to_be_reprocessed
+                self.ExtractGroupInfo()
 
 
+                if(self.group_pd is None):
+                    if(self.specificgroupsfile is not None):
+                        self.group_pd=pd.read_csv(self.opfolder+'Data/Groups/'+self.specificgroupsfile)
+                    else:
+                        self.group_pd=pd.read_csv(self.opfolder+'Data/Groups/'+str(self.cattofind_id)+'_'+str(self.topictofind)+'_Groups.csv')
+                groups_to_process=self.group_pd
+                #groups_to_process=self.group_pd[self.group_pd['city']=='Singapore']
+                self.allgroups_ids_urls_full=list(zip(groups_to_process.id,groups_to_process.urlname))
+                groups_already_processed_for_members=[int(i.split('_')[0]) for i in os.listdir(self.opfolder +'Data/Members/')]
 
-            self.ExtractEventInfo()
-            self.ExtractMemberInfo()
+                if(self.specificgroupsfile is not None):
+                        groups_to_be_reprocessed=self.allgroups_ids_urls_full
+                else:
+                    groups_to_be_reprocessed=[gf for gf in self.allgroups_ids_urls_full if(gf[0] not in groups_already_processed_for_members)]
+                print("Debug")
+                print(groups_to_be_reprocessed)
+                print(len(groups_to_be_reprocessed))
+                self.allgroups_ids_urls_full=groups_to_be_reprocessed
+                self.ExtractEventInfoCounts()
+
+            if events:
+                self.ExtractEventInfo()
+
+
+            if members:
+                self.ExtractMemberInfo()
 
         except Exception as e:
             print("Exception Occured")
@@ -131,7 +135,7 @@ class APIDataExtractionFacade:
 
 
 
-    def ExtractEventInfo(self):
+    def ExtractEventInfoCounts(self):
         totalgroups=len(self.allgroups_ids_urls_full)
         logstr= " No of groups in category Tech process for counts "  + str(totalgroups)
         self.Log(logstr)
@@ -145,12 +149,12 @@ class APIDataExtractionFacade:
         print(" Successful events counts found for groups " + str(len(EventCountsSuc)) + " among total groups "+  str(len(grp_ids_to_process)))
         print(" Events for which event count calculation failed are  " + str(len(EventCountsFailed)) + " among total groups "+  str(len(grp_ids_to_process)))
 
-
-        (EventIdsSuc,trace,groups_went_into_exception)=self._event_info_extractor.ExtractGroupEventsRecursive(grp_ids_to_process,self.opfolder)
+    def ExtractEventInfo(self):
+        (EventIdsSuc,trace,groups_went_into_exception)=self._event_info_extractor.ExtractGroupEventsRecursive(self.grp_ids_to_process_filtered,self.opfolder)
         self.Log(trace, prnt=False)
 
-        print(" Successful events found are " + str(len(EventIdsSuc)) + " among total groups "+  str(len(grp_ids_to_process)))
-        print(" Events for which event extraction failes are  " + str(len(groups_went_into_exception)) + " among total groups "+  str(len(grp_ids_to_process)))
+        print(" Successful events found are " + str(len(EventIdsSuc)) + " among total groups "+  str(len(self.grp_ids_to_process_filtered)))
+        print(" Events for which event extraction failes are  " + str(len(groups_went_into_exception)) + " among total groups "+  str(len(self.grp_ids_to_process_filtered)))
 
         #for t in trace:
         #    self.Log(trace)

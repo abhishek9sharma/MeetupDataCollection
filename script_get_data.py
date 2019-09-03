@@ -1,16 +1,18 @@
 from datadownloader.QueryAPI.GetDataFromAPI import *
+from  datadownloader.filter_groups import FilterGroups
 
 
 
 
 
 
-
-#cat = 'Tech'
-#topictofind = None
+# cat = 'Tech'
+# topictofind = None
 
 cat = None
 topictofind = 'julia'
+
+
 
 city_country_state = None #Location Requires City+Country in Case of Non US Locations
 
@@ -54,5 +56,18 @@ configfile = 'MeetupKeys3.json'
 #num_of_clients = 2
 
 apide=APIDataExtractionFacade(configfolder,opfolder,configfile, cattofind=cat,topic=topictofind,locinfo=city_country_state,specificgroups=None)
+apide.StartInfoExtraction(groups=True, events= False,  members= False)
+
 #apide = APIDataExtractionFacade(configfolder, opfolder, configfile)
-apide.StartInfoExtraction()
+
+
+#cat = apide.cattofind_id
+#topictofind = None
+#load SO TAGS
+
+sotags=pd.read_csv('SOTags/ALL.csv')
+filterlist=[str(tg).lower() for tg in sotags['TagName'].tolist()]
+#filterlist = ['python']
+filter = FilterGroups(opfolder, cat, topictofind, filterlist)
+filter.filter()
+
