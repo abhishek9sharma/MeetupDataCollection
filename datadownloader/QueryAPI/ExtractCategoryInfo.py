@@ -12,11 +12,14 @@ class CategoryInfoExtractor:
 
 
     def GetAllCategories(self):
-        mtupcl=self.meetup_clients[0][1]
-        self.cat_all=self.GetData(self.opfolder+'Data/CategoriesAll',mtupcl.GetCategories())
-        self.topic_Cats=self.GetData(self.opfolder+'Data/TopicCategories',mtupcl.GetTopicCategories())
-        print(self.cat_all)
-        print(self.topic_Cats)
+        try:
+            mtupcl=self.meetup_clients[0][1]
+            self.cat_all=self.GetData(self.opfolder+'Data/CategoriesAll',mtupcl.GetCategories())
+            self.topic_Cats=self.GetData(self.opfolder+'Data/TopicCategories',mtupcl.GetTopicCategories())
+            print(self.cat_all)
+            print(self.topic_Cats)
+        except  Exception as e:
+            print(e)
 
 
 
