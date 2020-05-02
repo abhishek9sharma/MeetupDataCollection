@@ -11,6 +11,7 @@ import  ast
 from requests_oauthlib import OAuth2Session
 
 class MeetUpClients:
+    
     def __init__(self, configfolder=None, configfile = 'MeetupKeys3.json'):
         self.configfolder=configfolder
         self.configfile = configfile
@@ -36,19 +37,22 @@ class MeetUpClients:
 
 
     def GetToken(self, api_info):
-        key = api_info['ACCESS_KEY']
-        secret = api_info['ACCESS_SECRET']
-        redirect_uri = api_info['REDIRECT_URI']
+        key = r'{}'.format(api_info['ACCESS_KEY'])
+        secret = r'{}'.format(api_info['ACCESS_SECRET'])
+        redirect_uri = r'{}'.format(api_info['REDIRECT_URI'])
         code = api_info['CODE']
         token = api_info['TOKEN']
         if token is "":
             try:
                 oauth_session = OAuth2Session(key, redirect_uri=redirect_uri)
+                #authorization_url, state = oauth_session.authorization_url('https://secure.meetup.com/oauth2/authorize')
+
                 token_url = r'https://secure.meetup.com/oauth2/access'
                 token = oauth_session.fetch_token(token_url, client_secret=secret, code=code, include_client_id=True)
                 api_info['TOKEN'] = token
                 return token['access_token']
-            except:
+            except Exception as e:
+                print(e)
                 return None
 
         else:

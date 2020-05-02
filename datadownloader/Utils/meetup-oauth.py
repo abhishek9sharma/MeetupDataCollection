@@ -11,7 +11,6 @@ scopes = ['basic', 'ageless'] # it's essential for long refresh time
 oauth = OAuth2Session(client_id, redirect_uri=redirect_uri, scope=scopes)
 authorization_url, state = oauth.authorization_url('https://secure.meetup.com/oauth2/authorize')
 
-
 print('Visit this URL: ' + str(authorization_url))
 
 
@@ -22,3 +21,4 @@ token = oauth.fetch_token(token_url, client_secret=client_secret, code=code, inc
 
 print('Token: ' + str(token))
 # {'access_token': '###', 'refresh_token': '###', 'token_type': 'bearer', 'expires_in': 72576000, 'expires_at': 123456}
+
