@@ -1,5 +1,5 @@
 A set of scripts which can help to download public data from [Meetup](https://www.meetup.com/) for a specific topic
-using there [RESTful API](https://www.meetup.com/meetup_api/). [https://www.meetup.com/api/guide/#graphQl-guide](https://www.meetup.com/api/general) is not supported 
+using their [RESTful API](https://www.meetup.com/meetup_api/). [https://www.meetup.com/api/guide/#graphQl-guide](https://www.meetup.com/api/general) is not supported 
 
 
 Used for data collection for below paper
