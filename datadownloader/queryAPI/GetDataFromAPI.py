@@ -24,6 +24,7 @@ class APIDataExtractionFacade:
 
         self.logfile = LoggingUtil(opfolder + 'Logs/', 'Started_API_Extraction_' + str(datetime.now()).replace(' ','_') + '.txt')
         self.opfolder = opfolder
+        self.configfolder = configfolder
         self.specificgroupsfile = specificgroups
         self.cattofind = cattofind
         self.topictofind = topic
@@ -142,8 +143,10 @@ class APIDataExtractionFacade:
 
     def extract_category_info(self):
         try:
-            self._category_info_extractor = CatExt(self.meetup_clients,self.opfolder)
+            self._category_info_extractor = CatExt(self.meetup_clients,self.opfolder, self.configfolder)
             self.cattofind_id = self._category_info_extractor.get_categoryid(self.cattofind)
+            self.cattofind_id = self._category_info_extractor.get_categoryid(self.cattofind)
+
             logstr="Category Id of " + self.cattofind + " is : " + str(self.cattofind_id)
             self.logdata(logstr)
         except Exception as e:
