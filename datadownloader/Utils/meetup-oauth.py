@@ -4,6 +4,7 @@ from requests_oauthlib import OAuth2Session
 client_id = input('Client ID: ')
 client_secret = input('Client Secret: ')
 #redirect_uri = r'https://abhishek9sharma.github.io/callback/' # Any URL, but with /callback
+#redirect_uri=''
 redirect_uri = input('Redirect URI: ') # Any URL, but with /callback
 
 scopes = ['basic', 'ageless'] # it's essential for long refresh time

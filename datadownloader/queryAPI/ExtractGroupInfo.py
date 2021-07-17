@@ -37,7 +37,7 @@ class GroupInfoExtractor:
         cityIN=grpinfo[5]
         opfolder=grpinfo[6]
         cl=self.meetupclients[int(offsetid%self.num_of_clients)]
-        logstr=" Invoked Client " + str(cl[0])
+        logstr=" Invoked Client2 " + str(cl[0])
         #currmethodtrace=logstr+"\n"
         print(logstr)
 
@@ -88,14 +88,14 @@ class GroupInfoExtractor:
 
 
             return  (groupinfo.results,currmethodtrace,offsetid,grpinfo)
-        except:
+        except Exception as e :
                 if(reprocess):
                     logstr="Exception Occured for Offset while reprocessing : " + str(offsetid)+ " using client" + str(cl[0])
                     currmethodtrace=logstr+"\n"
                     print(logstr)
 
                 else:
-                    logstr="Exception Occured for Offset : " + str(offsetid) + " using client" + str(cl[0])
+                    logstr="Exception Occured for Offset : " + str(offsetid) + " using client" + str(cl[0]) + str(e)
                     currmethodtrace=logstr+"\n"
                     print(logstr)
 

@@ -3,7 +3,7 @@ from jsonprocessor.TransformationUtil import TransformHelper as thlp
 import pandas as pd
 import  os
 import pandas.io.common
-
+import  gc
 
 class ProcessSingleGroupMembers:
 
@@ -14,6 +14,8 @@ class ProcessSingleGroupMembers:
         self.emptyfile = False
         self.exceptionoccured=False
         try:
+
+
             self.group_members_org=pd.read_csv(memberfilecsvin)
         except pandas.io.common.EmptyDataError:
             self.emptyfile=True
@@ -81,6 +83,8 @@ class ProcessSingleGroupMembers:
         print(" Members Processed " + str(len(groupd_member_listDict)) + "  Topics Found " + str(len(group_members_topics_list)))
         print(" Shape Transformed from " + str(self.group_members_org.shape) + " to " + str(self.group_members_df_all.shape))
 
+        gc.collect()
+
 
     def WriteConvertedCSV(self):
         if(self.opfolder is None):
@@ -90,6 +94,12 @@ class ProcessSingleGroupMembers:
         self.group_members_df_all.to_csv(self.opfolder+str(self.group_id)+'_members_converted.csv',index=False)
         self.group_members_topics_df.to_csv(self.opfolder+str(self.group_id)+'_group_members_topics.csv',index=False)
         self.group_members_joined_df.to_csv(self.opfolder+str(self.group_id)+'_group_members.csv',index=False)
+
+        # self.group_members_df_all = None
+        # self.group_members_topics_df = None
+        # self.group_members_joined_df = None
+        # gc.collect()
+
 
 
 

@@ -1,5 +1,4 @@
 __author__ = 'abhisheksh'
-__author__ = 'abhisheksh'
 
 
 
@@ -57,12 +56,6 @@ class MeetUpClients:
 
         else:
             return ast.literal_eval(api_info['TOKEN'])['access_token']
-
-
-
-
-
-
 
 
 

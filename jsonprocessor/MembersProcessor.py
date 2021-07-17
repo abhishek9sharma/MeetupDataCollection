@@ -6,13 +6,16 @@ from jsonprocessor.MemberProcessor import ProcessSingleGroupMembers as MP
 from functools import reduce
 import  multiprocessing as mp
 import pandas.io.common
+import  gc
 
 class ProcessGroupsMembers:
 
-    def __init__(self,groupfilecsv,memberfolder,opfolder,reprocessMode=False):
+    def __init__(self,groupfilecsv,memberfolder,opfolder,reprocessMode=False, processed_groups=[]):
         self.memberfolder=memberfolder
         self.opfolder=opfolder
+        self.processed_groups = processed_groups
         self.group_pdframe = pd.read_csv(groupfilecsv)
+        #self.group_pdframe = self.group_pdframe.iloc[1500:]
         self.groups_members_files=os.listdir(self.memberfolder)
 
         self.validgroupids = [str(id) for id in self.group_pdframe['id'].tolist()]
@@ -43,6 +46,8 @@ class ProcessGroupsMembers:
             print(e)
             m_pro.exceptionoccured=True
             return m_pro
+        finally:
+            return  m_pro
 
 
 
@@ -60,34 +65,42 @@ class ProcessGroupsMembers:
             #print("Debug")
 
         '''
-        if(sublistnumber is not  None):
-            cores=mp.cpu_count()-1
-            pooltofind_members=mp.Pool(cores)
-            self.members_processed=pooltofind_members.map(self.ProcessSingleGroupMembers,self.groups_members_files_sublists[sublistnumber])
-            pooltofind_members.close()
-            pooltofind_members.join()
+        try:
+            if(sublistnumber is not  None):
+                cores=mp.cpu_count()-1
+                pooltofind_members=mp.Pool(cores)
+                self.members_processed=pooltofind_members.map(self.ProcessSingleGroupMembers,self.groups_members_files_sublists[sublistnumber])
+                pooltofind_members.close()
+                pooltofind_members.join()
 
 
-        else:
-            cores=mp.cpu_count()-1
-            pooltofind_members=mp.Pool(cores)
-            self.members_processed=pooltofind_members.map(self.ProcessSingleGroupMembers,self.groups_members_files)
-            pooltofind_members.close()
-            pooltofind_members.join()
+            else:
+                cores=mp.cpu_count()-1
+                pooltofind_members=mp.Pool(cores)
+                self.members_processed=pooltofind_members.map(self.ProcessSingleGroupMembers,self.groups_members_files)
+                pooltofind_members.close()
+                pooltofind_members.join()
 
 
-        self.group_members_failed= [m for m in self.members_processed if
-                                                        (m.emptyfile == True or m.exceptionoccured == True)]
+            # COMMENTED 14052020
+            self.group_members_failed= [m for m in self.members_processed if
+                                                            (m.emptyfile == True or m.exceptionoccured == True)]
 
-        self.group_members_df_all_combined=pd.concat([m.group_members_df_all for m in self.members_processed if(m.emptyfile==False and m.exceptionoccured==False)])
+            self.group_members_df_all_combined=pd.concat([m.group_members_df_all for m in self.members_processed if(m.emptyfile==False and m.exceptionoccured==False)])
 
-        self.group_members_joined_df_combined=pd.concat([m.group_members_joined_df for m in self.members_processed])
-        self.group_members_topics_df_combined=pd.concat([m.group_members_topics_df for m in self.members_processed])
-        self.group_members_topics_df_combined=self.group_members_topics_df_combined.drop_duplicates()
+            self.group_members_joined_df_combined=pd.concat([m.group_members_joined_df for m in self.members_processed])
+            self.group_members_topics_df_combined=pd.concat([m.group_members_topics_df for m in self.members_processed])
+            self.group_members_topics_df_combined=self.group_members_topics_df_combined.drop_duplicates()
 
-        print("Members Shape before duplicate removal " + str(self.group_members_df_all_combined.shape))
-        self.group_members_df_all_combined=self.group_members_df_all_combined.drop_duplicates()
-        print("Members Shape after duplicate removal " + str(self.group_members_df_all_combined.shape))
+
+            print("Members Shape before duplicate removal " + str(self.group_members_df_all_combined.shape))
+            self.group_members_df_all_combined=self.group_members_df_all_combined.drop_duplicates()
+            print("Members Shape after duplicate removal " + str(self.group_members_df_all_combined.shape))
+
+            # COMMENTED 14052020
+
+        except Exception as e:
+            print(" Exception " + str(e) + "  occured for " )
 
     #TO DO Delete this method
     def ProcessAllGroups_Members_LinearAndPArallel(self,splitnumber):
@@ -121,7 +134,8 @@ class ProcessGroupsMembers:
 
 
 
-        self.group_members_df_all_combined=pd.concat([m.group_members_df_all for m in self.members_processed if(m.emptyfile==False and m.exceptionoccured==False)])
+        self.group_members_df_all_combined=pd.concat([m.group_members_df_all \
+                                                      for m in self.members_processed if(m.emptyfile==False and m.exceptionoccured==False)])
         self.group_members_failed= [m for m in self.members_processed if
                                                         (m.emptyfile == True or m.exceptionoccured == True)]
 
@@ -133,22 +147,44 @@ class ProcessGroupsMembers:
         self.group_members_df_all_combined=self.group_members_df_all_combined.drop_duplicates()
         print("Members Shape after duplicate removal " + str(self.group_members_df_all_combined.shape))
 
+        self.members_processed = None
+        gc.collect()
+
 
 
     def WriteConvertedCSV(self,filename=''):
         combfolder='/Members_Groups_Combined/'
         if(self.reprocessMode):
-            existingdf_members_converted_combined=pd.read_csv(self.opfolder+combfolder+'members_converted_combined.csv')
+
+
+            if os.path.exists(self.opfolder+combfolder+'members_converted_combined.csv'):
+                existingdf_members_converted_combined = pd.read_csv(self.opfolder+combfolder+'members_converted_combined.csv')
+            else:
+                existingdf_members_converted_combined = pd.DataFrame()
+
+            if os.path.exists(self.opfolder + combfolder + 'members_topics_combined.csv'):
+                existingdf_members_topics_combined = pd.read_csv(
+                    self.opfolder + combfolder + 'members_topics_combined.csv')
+            else:
+                existingdf_members_topics_combined = pd.DataFrame()
+
+
+            if os.path.exists(self.opfolder + combfolder + 'members_groups_combined.csv'):
+                existingdf_members_groups_combined = pd.read_csv(
+                    self.opfolder + combfolder + 'members_groups_combined.csv')
+            else:
+                existingdf_members_groups_combined =pd.DataFrame()
+
+
             newdf_members_converted_combined=pd.concat([existingdf_members_converted_combined,self.group_members_df_all_combined])
             newdf_members_converted_combined=newdf_members_converted_combined.drop_duplicates()
             newdf_members_converted_combined.to_csv(self.opfolder+combfolder+'members_converted_combined_reprooceseed.csv',index=False)
 
-            existingdf_members_topics_combined=pd.read_csv(self.opfolder+combfolder+'members_topics_combined.csv')
+
             newdf_members_topics_combined=pd.concat([existingdf_members_topics_combined,self.group_members_topics_df_combined])
             newdf_members_topics_combined=newdf_members_topics_combined.drop_duplicates()
             newdf_members_topics_combined.to_csv(self.opfolder+combfolder+'members_topics_combined_reprooceseed.csv',index=False)
 
-            existingdf_members_groups_combined=pd.read_csv(self.opfolder+combfolder+'members_groups_combined.csv')
             newdf_members_groups_combined=pd.concat([existingdf_members_groups_combined,self.group_members_joined_df_combined])
             newdf_members_groups_combined=newdf_members_groups_combined.drop_duplicates()
             newdf_members_groups_combined.to_csv(self.opfolder+combfolder+'members_groups_combined_reprooceseed.csv',index=False)

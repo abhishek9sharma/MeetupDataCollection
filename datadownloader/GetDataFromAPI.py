@@ -7,10 +7,10 @@ import  pandas as pd
 from  Utils.Logging import LoggingUtil
 from datetime import  datetime
 from APIClient.MeetupClients import MeetUpClients
-from QueryAPI.ExtractGroupInfo import GroupInfoExtractor as GrpExt
-from QueryAPI.ExtractCategoryInfo import CategoryInfoExtractor as CatExt
-from QueryAPI.ExtractEventInfo import EventInfoExtractor as EventExt
-from QueryAPI.ExtractMemberInfo import MemberInfoExtractor as MembExt
+from queryAPI.ExtractGroupInfo import GroupInfoExtractor as GrpExt
+from queryAPI.ExtractCategoryInfo import CategoryInfoExtractor as CatExt
+from queryAPI.ExtractEventInfo import EventInfoExtractor as EventExt
+from queryAPI.ExtractMemberInfo import MemberInfoExtractor as MembExt
 
 import os
 import  multiprocessing as mp
@@ -103,7 +103,7 @@ class APIDataExtractionFacade:
     def ExtractCategoryInfo(self):
         try:
             self._category_info_extractor=CatExt(self.meetup_clients,self.opfolder)
-            self.cattofind_id=self._category_info_extractor.GetCategoryId(self.cattofind)
+            self.cattofind_id=self._category_info_extractor.get_categoryid(self.cattofind)
             logstr="Category Id of "+ self.cattofind + " is : " + str(self.cattofind_id)
             self.Log(logstr)
         except:

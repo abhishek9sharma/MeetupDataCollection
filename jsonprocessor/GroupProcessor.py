@@ -24,18 +24,22 @@ class ProcessGroups:
             for c in self.group_pdframe.columns:
             #for c in ['category']:
                 if(c=='topics'):
-                    topics_grp=eval(row[c])
-                    for t in topics_grp:
-                        t['groupid']=row['id']
-                        #print(t)
-                        topicList.append(t)
+                    try:
+                        topics_grp=eval(row[c])
+                        for t in topics_grp:
+                            t['groupid']=row['id']
+                            #print(t)
+                            topicList.append(t)
+                    except:
+                        pass
+
 
                 else:
                     data=row[c]
                     try:
                         self.thlp.TransformData(rowdict,data,c)
-                    except:
-                        print( "Exception Occured for Gorup with Index " + str(idx))
+                    except Exception as e:
+                        print(e, "Exception Occured for Gorup with Index " + str(idx))
 
             listDict.append(rowdict)
 
