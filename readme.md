@@ -14,7 +14,7 @@ Used for data collection for below paper
 
 ### Set API Key
 - Get authorization tokens' from  [Meetup RESTful API](https://www.meetup.com/meetup_api/)
-- Store tokens' as json file in the format mentioned in [MeetupKeysOAUTH.json](blob/master/datadownloader/Config/MeetupKeysOAUTH.json)
+- Store tokens' as json file in the format mentioned in [MeetupKeysOAUTH.json](/datadownloader/Config/MeetupKeysOAUTH.json)
 
 ### DOWNLOAD DATA
 
