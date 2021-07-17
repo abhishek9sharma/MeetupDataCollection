@@ -22,36 +22,36 @@ class ConvertData:
         self._group_data_processor.WriteConvertedCSV()
 
         #Convert and Write Event Data
-        #self._event_data_processor.ProcessAllGroupEventFiles()
-        #self._event_data_processor.WriteConvertedCSV()
-        #self._event_data_processor.WriteFailedGroups()
+        self._event_data_processor.ProcessAllGroupEventFiles()
+        self._event_data_processor.WriteConvertedCSV()
+        self._event_data_processor.WriteFailedGroups()
 
         #Convert and Write Member Data
 
-        # if(membersplitnumber!=0):
-        #     splitsize = int(len(self._member_data_processor.groups_members_files) / membersplitnumber)
-        #     self._member_data_processor.groups_members_files_sublists = [self._member_data_processor.groups_members_files[i:i + splitsize] for i in
-        #                                           range(0, len(self._member_data_processor.groups_members_files), splitsize)]
-        #
-        #     for sublistnumber in range(membersplitnumber):
-        #         print(" Processing Member Sublist " + str(sublistnumber))
-        #         self._member_data_processor.ProcessAllGroups_Members(sublistnumber)
-        #         #self._member_data_processor.ProcessAllGroups_Members_LinearAndPArallel(4)
-        #         self._member_data_processor.WriteConvertedCSV(sublistnumber)
-        #         self._member_data_processor.WriteFaileGroups(sublistnumber)
-        #
-        #
-        #         self._member_data_processor.group_members_df_all_combined=None
-        #         self._member_data_processor.group_members_topics_df_combined=None
-        #         self._member_data_processor.group_members_joined_df_combined=None
-        #         self._member_data_processor.members_processed=[]
-        #         gc.collect()
-        #
-        # else:
-        #     self._member_data_processor.ProcessAllGroups_Members()
-        #     #self._member_data_processor.ProcessAllGroups_Members_LinearAndPArallel(4)
-        #     self._member_data_processor.WriteFailedGroups()
-        #    gc.collect()
+        if(membersplitnumber!=0):
+            splitsize = int(len(self._member_data_processor.groups_members_files) / membersplitnumber)
+            self._member_data_processor.groups_members_files_sublists = [self._member_data_processor.groups_members_files[i:i + splitsize] for i in
+                                                  range(0, len(self._member_data_processor.groups_members_files), splitsize)]
+
+            for sublistnumber in range(membersplitnumber):
+                print(" Processing Member Sublist " + str(sublistnumber))
+                self._member_data_processor.ProcessAllGroups_Members(sublistnumber)
+                #self._member_data_processor.ProcessAllGroups_Members_LinearAndPArallel(4)
+                self._member_data_processor.WriteConvertedCSV(sublistnumber)
+                self._member_data_processor.WriteFaileGroups(sublistnumber)
+
+
+                self._member_data_processor.group_members_df_all_combined=None
+                self._member_data_processor.group_members_topics_df_combined=None
+                self._member_data_processor.group_members_joined_df_combined=None
+                self._member_data_processor.members_processed=[]
+                gc.collect()
+
+        else:
+            self._member_data_processor.ProcessAllGroups_Members()
+            #self._member_data_processor.ProcessAllGroups_Members_LinearAndPArallel(4)
+            self._member_data_processor.WriteFailedGroups()
+        gc.collect()
 
 
 
