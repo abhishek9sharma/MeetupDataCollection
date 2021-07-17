@@ -51,7 +51,7 @@ Used for data collection for below paper
                     -top quantum-algorithms \
                     -G True -E True -M True\
 
-#### JOIN AND CONVERT DATA TO CSV (Can be donw only after downloading data)
+#### JOIN AND CONVERT DATA TO CSV FOR ANALYSIS (Can be done only after downloading data)
 
  - copy file name in the format *id_None_Groups.csv* or *id1_id2_Groups.csv*  that shouldbe present at below path
 in `datafol` location specified in earlier step
