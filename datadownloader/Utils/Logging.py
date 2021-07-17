@@ -2,11 +2,12 @@ __author__ = 'abhisheksh'
 
 __author__ = 'abhisheksh'
 import datetime
+import os
 
 class LoggingUtil:
         def __init__(self,path,name):
             self.timeinitialized=datetime.datetime.now()
-            self.logfilepath=path+name
+            self.logfilepath=(path+name).replace(':','_')
             self.IntializeFile()
 
         def IntializeFile(self):
