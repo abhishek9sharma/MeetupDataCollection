@@ -55,7 +55,9 @@ Used for data collection for below paper
 
  - copy file name in the format *id_None_Groups.csv* or *id1_id2_Groups.csv*  that shouldbe present at below path
 in `datafol` location specified in earlier step
-        -  `datafol/Data/Groups/`
+
+        -  `$PWD/data/Data/Groups/`
+
   - run the below command with flags specified
     
     - Format

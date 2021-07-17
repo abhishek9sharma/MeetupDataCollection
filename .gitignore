@@ -2,5 +2,4 @@
 *.pyc
 /datadownloader/Config/MeetupKeys3.json
 meetupvenv/
-data/
 ignore/
