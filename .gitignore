@@ -4,4 +4,4 @@
 meetupvenv/
 data/
 *.csv
-logfile
+ignore/
