@@ -1,31 +1,26 @@
-from datadownloader.QueryAPI.GetDataFromAPI import *
-from  datadownloader.filter_groups import FilterGroups
+import os
 
-
-
-
-
+from datadownloader.queryAPI.GetDataFromAPI import *
+from datadownloader.filter_groups import FilterGroups
 
 # cat = 'Tech'
 # topictofind = None
 
 cat = None
-topictofind = 'julia'
-
-
-
+topictofind = 'sanskrit'
 city_country_state = None #Location Requires City+Country in Case of Non US Locations
 
 #Set Topic to Mine
-if cat is None  and topictofind is None:
+if cat is None and topictofind is None:
     raise ValueError(" Please set a catgeory or topic whose data has to be extracted")
 elif cat:
     opfolder = cat
 else:
     opfolder = topictofind
 
-opfolder = '../'+opfolder+'/'
+opfolder = os.getcwd()+'/data/'+opfolder+'/'
 
+print(opfolder)
 #Creat Data Directories
 try:
     os.mkdir(opfolder)
@@ -50,14 +45,23 @@ except :
 
 
 #configfolder= os.path.dirname(os.path.realpath(__file__))
-configfolder = None
+configfolder = os.path.join(os.getcwd(),'datadownloader','Config')
 configfile = 'MeetupKeys3.json'
 #opfolder ='data/'
 #num_of_clients = 2
 
-apide=APIDataExtractionFacade(configfolder,opfolder,configfile, cattofind=cat,topic=topictofind,locinfo=city_country_state,specificgroups=None)
-apide.StartInfoExtraction(groups=True, events= False,  members= False)
+apide = APIDataExtractionFacade(configfolder,\
+                              opfolder,\
+                              configfile, \
+                              cattofind=cat,\
+                              topic=topictofind,\
+                              locinfo=city_country_state,\
+                              specificgroups=None)
 
+apide.start_info_extraction(groups=False,\
+                            events=True,\
+                            members=False,
+                            eventcountsextract=False)
 #apide = APIDataExtractionFacade(configfolder, opfolder, configfile)
 
 
@@ -65,9 +69,10 @@ apide.StartInfoExtraction(groups=True, events= False,  members= False)
 #topictofind = None
 #load SO TAGS
 
-sotags=pd.read_csv('SOTags/ALL.csv')
-filterlist=[str(tg).lower() for tg in sotags['TagName'].tolist()]
-#filterlist = ['python']
-filter = FilterGroups(opfolder, cat, topictofind, filterlist)
-filter.filter()
+
+# sotags=pd.read_csv('SOTags/ALL.csv')
+# filterlist=[str(tg).lower() for tg in sotags['TagName'].tolist()]
+# #filterlist = ['python']
+# filter = FilterGroups(opfolder, cat, topictofind, filterlist)
+# filter.filter()
 

@@ -8,17 +8,18 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from pathlib import Path
 import numpy as np
-from datadownloader.QueryAPI.GetDataFromAPI import *
+from datadownloader.queryAPI.GetDataFromAPI import *
 from datadownloader.APIClient.MeetupClients import MeetUpClients
 
 domain='techall'
-mainfolder = '/home/abhisheksh/PROJECTS/Meetup/techall/'
-mainfolder ='/media/oldmonk/D/LAPTOP/MeetupData/techall'
+mainfolder = '/home/abhisheksh/PROJECTS/Meetup/techall'
+#mainfolder ='/media/oldmonk/D/LAPTOP/MeetupData/techall'
+#uniqevents_eng=pd.read_csv(mainfolder+'/Data/CSVFormat_SWDEV_060518/Events/Events_Groups_Combined/'+'uniqevents_eng_filtered_185758.csv',
+#                          index_col='created', parse_dates=True)
+#uniqevents_eng=uniqevents_eng.drop_duplicates(['description'])
+#event_details = uniqevents_eng[['id','event_url']]
+event_details = pd.read_csv('/media/oldmonk/D/LAPTOP/MeetupData/techall/smalleventsnew.csv',index_col='created')
 
-uniqevents_eng=pd.read_csv(mainfolder+'/Data/CSVFormat_SWDEV_060518/Events/Events_Groups_Combined/'+'uniqevents_eng_filtered_185758.csv',
-                          index_col='created',parse_dates=True, nrows = 500)
-uniqevents_eng=uniqevents_eng.drop_duplicates(['description'])
-event_details = uniqevents_eng[['id','event_url']]
 
 
 
@@ -45,5 +46,5 @@ configfolder = None
 configfile = 'MeetupKeys3.json'
 
 apide=APIDataExtractionFacade(configfolder,opfolder,configfile, cattofind=cat,topic=topictofind,locinfo=city_country_state,specificgroups=None)
-apide.ExtractEventDetails(event_details)
+apide.extract_eventdetails(event_details)
 

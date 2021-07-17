@@ -171,7 +171,7 @@ class APIDataExtractionFacade:
         if self.grp_ids_to_process_filtered is None:
             self.grp_ids_to_process_filtered = self.allgroups_ids_urls_full
 
-        if not('_event_info_extractor' in self.__dict__):
+        if self._event_info_extractor is None or not('_event_info_extractor' in self.__dict__):
             self._event_info_extractor = EventExt(self.meetup_clients)
 
         (EventIdsSuc,trace,groups_went_into_exception)=self._event_info_extractor.ExtractGroupEventsRecursive(
