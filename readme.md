@@ -4,13 +4,6 @@ using their [RESTful API](https://www.meetup.com/meetup_api/). [https://www.meet
 
 Used for data collection for below paper
 
-### Citation
-    @article{sharma2019analyzing,
-      title={Analyzing Offline Social Engagements: An Empirical Study of Meetup Events Related to Software Development},
-      author={Sharma, Abhishek and Prana, Gede Artha Azriadi and Sawhney, Anamika and Nagappan, Nachiappan and Lo, David},
-      journal={arXiv preprint arXiv:1912.07352},
-      year={2019}
-    }
 
 ### Set API Key
 - Get authorization tokens' from  [Meetup RESTful API](https://www.meetup.com/meetup_api/)
