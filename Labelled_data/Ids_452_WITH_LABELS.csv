@@ -1,0 +1,453 @@
+SNO,EVENT_URL,EVENTID,EVENTNAME,LABEL,METHOD
+1,https://www.meetup.com/RockyMountainAngular/events/238682321/,238682321,Angular Update: Whats New in v4 and the CLI,Talks by Domain Experts,OPENCODING
+2,https://www.meetup.com/MongoDB-San-Diego-Meetup/events/246688321/,246688321,MongoDB.local SoCal event,Conferences,OPENCODING
+3,https://www.meetup.com/Jozi-JUG/events/73525382/,73525382,July Jozi JUG - JRebel and LiveRebel,Talks by Domain Experts,OPENCODING
+4,https://www.meetup.com/Software-Architect-Indonesia/events/236085974/,236085974,Technical Knowledge Power-Up - Security and Agile,Talks by Domain Experts,OPENCODING
+5,https://www.meetup.com/23bshop/events/237310109/,xhjmwlywdbxb,Hacker Potluck++,Open Discussion,OPENCODING
+6,https://www.meetup.com/NodeMelbourne/events/180675092/,180675092,May meetup,Talks by Domain Experts,OPENCODING
+7,https://www.meetup.com/nycpython/events/120696492/,120696492,Lightning Talks Sprinting on CPython and a new Minimal Language Drinks Fun!,Talks by Domain Experts,OPENCODING
+8,https://www.meetup.com/drupal-1/events/173400122/,173400122,Free Drupal Training and Install Workshop (Global Training Days),Hands-on Sessions,OPENCODING
+9,https://www.meetup.com/indy-gdg/events/195252302/,dfrlggyslbzb,Android L Preview - SDK 20 APIs and Material Design Introduction,Talks by Domain Experts,OPENCODING
+10,https://www.meetup.com/CocoaHeadsCOS/events/231573529/,231573529,WWDC Live @ KST: Day 5,Conferences,OPENCODING
+11,https://www.meetup.com/Girl-Develop-It-Boise/events/223749614/,223749614,Intro to Programming with Python (6 hours class),Hands-on Sessions,OPENCODING
+12,https://www.meetup.com/Vancouver-Tech-Co-Founders/events/218827424/,218827424,The Idea Bootcamp!,Hands-on Sessions,OPENCODING
+13,https://www.meetup.com/Londonjavacommunity/events/228746825/,228746825,Online RAFFLE: 5 tickets Voxxed Days Bristol 2016 (25 February 2016),Conferences,OPENCODING
+14,https://www.meetup.com/NE-MSFT-Devs/events/225808489/,225808489,Datazen: Dashboards KPIs and Maps for any Device,Talks by Domain Experts,OPENCODING
+15,https://www.meetup.com/clj-syd/events/85246642/,85246642,(nth clj-syd 8),Open Discussion,OPENCODING
+16,https://www.meetup.com/girldevelopit/events/223231330/,223231330,Intro to Git and GitHub,Hands-on Sessions,OPENCODING
+17,https://www.meetup.com/Girl-Develop-It-Austin/events/184820342/,184820342,Diving in Deeper with HTML5 & CSS3,Hands-on Sessions,OPENCODING
+18,https://www.meetup.com/IoTTexas/events/245567491/,245567491,US Ignite Gigabit Internet Application Challenge Event $20000 in Awards,Competitions,OPENCODING
+19,https://www.meetup.com/cppmsg_cpp/events/244095148/,kpfzqnywnbhc,In-Person||Online Q&A Modern C++ Mentoring and Study Group-4th Wednesday-CppMSG,Open Discussion,OPENCODING
+20,https://www.meetup.com/Dunedin-Gamedev-Meetup/events/234601849/,234601849,October Dunedin GameDev Meetup,Open Discussion,OPENCODING
+21,https://www.meetup.com/owaspnyc/events/218702710/,218702710,2014 Review / 2015 Planning Session,Administrative Events,OPENCODING
+22,https://www.meetup.com/Girl-Develop-It-CentralVA/events/234975241/,234975241,Lunch & Learn: Whiteboarding,Talks by Domain Experts,OPENCODING
+23,https://www.meetup.com/gdg-melbourne/events/16937274/,16937274,March Meetup,Talks by Domain Experts,OPENCODING
+24,https://www.meetup.com/Baton-Rouge-NET-and-SQL-Server-User-Groups/events/237421526/,237421526,March .NET and SQL Server Meeting,Talks by Domain Experts,OPENCODING
+25,https://www.meetup.com/IMUG-Silicon-Valley/events/169351602/,qskhzdysqbxb,Annual IMUG International Potluck and Holiday Bash,Social Events,OPENCODING
+26,https://www.meetup.com/founderscoders/events/235816225/,235816225,Founders and Coders Unofficial Meetup,Open Discussion,OPENCODING
+27,https://www.meetup.com/Portland_SaaS/events/230320510/,230320510,Meet to discuss masterminds,Talks by Domain Experts,OPENCODING
+28,https://www.meetup.com/Nashville-CocoaHeads/events/230811159/,230811159,An Apple a Day: Developing Apps with HealthKit,Talks by Domain Experts,OPENCODING
+29,https://www.meetup.com/San-Francisco-Hackathons/events/197575472/,197575472,Hackathon to Develop Cloud-Aware App for Non-Profit,Competitions,OPENCODING
+30,https://www.meetup.com/Columbus-Salesforce-Developer-Group/events/239457265/,wksqxmywhbwb,Columbus Salesforce Developers,Open Discussion,OPENCODING
+31,https://www.meetup.com/Tokyo-Bitcoin-Meetup-Group/events/231489824/,gfkpjlyvjbfc,Tokyo Bitcoin Group 200th MeetUp,Social Events,OPENCODING
+32,https://www.meetup.com/DevTank/events/13483973/,13483973,CouchDB Workshop,Hands-on Sessions,OPENCODING
+33,https://www.meetup.com/MoedegruppeFunktionelleKoebenhavnere/events/245317659/,245317659,[HC/DIKU] Tweag.IO informal TGIF get-together,Talks by Domain Experts,OPENCODING
+34,https://www.meetup.com/The-Software-Shack/events/244089549/,244089549,Blockchain and the IoT | Blockchain dans IIoT,Talks by Domain Experts,OPENCODING
+35,https://www.meetup.com/OpenHack-DC/events/241235928/,bjjmtlywlbsb,OPEN HACK DC: Hack & Beer,Open Discussion,OPENCODING
+36,https://www.meetup.com/SF-Data-Science/events/238783647/,238783647,Cognitive Builder Faire: San Francisco (4.21-4.23),Conferences,OPENCODING
+37,https://www.meetup.com/chiPMA/events/42185732/,42185732,Greg Geracie -Three Tips to Improve Effectiveness as a Product Manager,Talks by Domain Experts,OPENCODING
+38,https://www.meetup.com/Phoenix-ReactJS/events/247526250/,247526250,Experienced devs: TypeScript Event Emitters Streamlined Redux,Talks by Domain Experts,OPENCODING
+39,https://www.meetup.com/San-Francisco-Microsoft-Data-Platform/events/74659362/,74659362,Red Gate SQL in the City,Talks by Domain Experts,OPENCODING
+40,https://www.meetup.com/girldevelopitcbus/events/237881921/,swnknlywfbdc,GDI Hack Night Community Meetup,Open Discussion,OPENCODING
+41,https://www.meetup.com/Strange-Group-Berlin/events/233378097/,233378097,Strange Group August,Talks by Domain Experts,OPENCODING
+42,https://www.meetup.com/Boston-Software-Craftsmanship/events/230050856/,230050856,Playing with agent based models and emergent behavior,Hands-on Sessions,OPENCODING
+43,https://www.meetup.com/Osaka-Web-Designers-and-Developers-Meetup/events/221648850/,221648850,Aprils web developer talks,Open Discussion,OPENCODING
+44,https://www.meetup.com/supaproductpeninsula/events/195113422/,195113422,Live Broadcast: Anca Mosoiu Founder Tech Liminal Hacking Tech Communities,Talks by Domain Experts,OPENCODING
+45,https://www.meetup.com/Girl-Develop-It-Austin/events/175908712/,175908712,Intro to Object-Oriented Programming with Java,Hands-on Sessions,OPENCODING
+46,https://www.meetup.com/Code-for-Rockford/events/184151052/,dspmcjysjbsb,Code for Rockford OpenData Coding Session,Hands-on Sessions,OPENCODING
+47,https://www.meetup.com/TriadShakeITup/events/248741359/,248741359,Join us for Shake IT Up of the Triad! RSVP for our next Meetup!,Social Events,OPENCODING
+48,https://www.meetup.com/JavaScriptKC/events/241360759/,241360759,Functional Programming Fundamentals,Talks by Domain Experts,OPENCODING
+49,https://www.meetup.com/dotnetnotts/events/223375704/,223375704,CasperJS by Richard Wilde,Talks by Domain Experts,OPENCODING
+50,https://www.meetup.com/Girl-Develop-It-Boston/events/202344562/,202344562,Web Development: Lets Break it Down! (General Assembly),Hands-on Sessions,OPENCODING
+51,https://www.meetup.com/nysoftware/events/229316900/,229316900,Hadoop 2.x / Apache Spark / R Analytics Foundation Courses,Hands-on Sessions,OPENCODING
+52,https://www.meetup.com/General-Assembly-Seattle/events/222360563/,222360563,Public Relations 101,Hands-on Sessions,OPENCODING
+53,https://www.meetup.com/Startup-Show-Tell/events/245889592/,245889592,Machine Learning for Business Applications,Hands-on Sessions,OPENCODING
+54,https://www.meetup.com/TriDroid/events/225750519/,225750519,Playing Media on Android 5 & Beyond,Talks by Domain Experts,OPENCODING
+55,https://www.meetup.com/Evansville-Technology-Group/events/236824527/,236824527,Group Round Table,Open Discussion,OPENCODING
+56,https://www.meetup.com/Evansville-Technology-Group/events/236824527/,236824527,Group Round Table,Administrative Events,OPENCODING
+57,https://www.meetup.com/GameLabs/events/235324645/,cxjvslyvpbgc,Monthly MeetUp,Hands-on Sessions,OPENCODING
+58,https://www.meetup.com/GameLabs/events/235324645/,cxjvslyvpbgc,Monthly MeetUp,Talks by Domain Experts,OPENCODING
+59,https://www.meetup.com/I-T-Social-Cafe/events/237334581/,237334581,International Exchange Party in Akasaka!,Social Events,OPENCODING
+60,https://www.meetup.com/I-T-Social-Cafe/events/237334581/,237334581,International Exchange Party in Akasaka!,Others,OPENCODING
+61,https://www.meetup.com/BarcelonaJUG/events/173493382/,173493382,Introduction to Apache Cassandra,Talks by Domain Experts,OPENCODING
+62,https://www.meetup.com/SF-Data-Science/events/236682964/,236682964,Working with an IDE: Python/Jupyter Notebooks RStudio Spark and R Shiny App,Talks by Domain Experts,OPENCODING
+63,https://www.meetup.com/Honolulu-New-Tech-Meetup/events/220359071/,220359071,HVCA Entrepreneur & Deal of the Year Awards,Social Events,OPENCODING
+64,https://www.meetup.com/010PHP/events/201101972/,qsdjkgysmbpb,Inter-Process Communication - solving the problem of transporting lolcats,Talks by Domain Experts,OPENCODING
+65,https://www.meetup.com/london-software-craftsmanship/events/16117553/,16117553,Software Craftsmanship Round-table,Open Discussion,OPENCODING
+66,https://www.meetup.com/WWCWichita/events/200792882/,200792882,Technical Study Group (Hack Night),Hands-on Sessions,OPENCODING
+67,https://www.meetup.com/jsmeetup/events/98573142/,98573142,HTML5DevConf Call for Proposals Due,Conferences,OPENCODING
+68,https://www.meetup.com/West-Midlands-Ruby-User-Group-WMRUG/events/231939969/,dhxdzfyvkbbc,July Meetup,Open Discussion,OPENCODING
+69,https://www.meetup.com/Boston_New_Technology/events/241702796/,241702796,Intro to the Boston Startup Community! RSVP here required: http://ga.co/2rz2vfm,Talks by Domain Experts,OPENCODING
+70,https://www.meetup.com/broward-drupal/events/221616636/,221616636,Celebrating our 5-year anniversary. Topic: Intro to the Migrate Module,Talks by Domain Experts,OPENCODING
+71,https://www.meetup.com/SoftwareArchitectsBangalore/events/232659731/,232659731,Software Architects Bangalore Seventh Meetup,Talks by Domain Experts,OPENCODING
+72,https://www.meetup.com/djangovan/events/14960525/,stldnynnbjc,Vancouver Django Meetup Group Monthly Meetup,Open Discussion,OPENCODING
+73,https://www.meetup.com/node-sydney/events/231588483/,wddlhlywgbjb,Sydney Node Ninjas - @Tabcorp,Talks by Domain Experts,OPENCODING
+74,https://www.meetup.com/Lisbon-MongoDB-User-Group/events/218646101/,218646101,MongoDB Bug Hunt: 2.8 RC-0,Competitions,OPENCODING
+75,https://www.meetup.com/Ember-LA/events/194525902/,dkrvnjysmbjb,Hackfest at the Beach,Hands-on Sessions,OPENCODING
+76,https://www.meetup.com/GDG-Liverpool/events/227340091/,227340091,GDG Liverpool January,Talks by Domain Experts,OPENCODING
+77,https://www.meetup.com/LA-Tech-Happy-Hour/events/227838262/,227838262,LATHH Party @ Investor Festival,Social Events,OPENCODING
+78,https://www.meetup.com/Girl-Develop-It-Boulder-Denver/events/239467306/,239467306,Introduction to Command Line [BOULDER],Hands-on Sessions,OPENCODING
+79,https://www.meetup.com/Dallas-Salesforce-Developer-User-Group/events/227186313/,cvrlglyvcbvb,Platform App and Dev1 Study Group Meeting,Hands-on Sessions,OPENCODING
+80,https://www.meetup.com/LeedsJS/events/167485052/,167485052,Meteor: Rock Your World,Talks by Domain Experts,OPENCODING
+81,https://www.meetup.com/Ottawa-Scrum-Users-Group/events/227589133/,227589133,Consultancy Scrum,Talks by Domain Experts,OPENCODING
+82,https://www.meetup.com/Sea-Tech-Forum/events/94079142/,94079142,Test Focus Group: Beyond 5 stars -- Quantify quality by leveraging app users,Talks by Domain Experts,OPENCODING
+83,https://www.meetup.com/learn-python-nyc/events/232179191/,ntsbslyvkbhb,Tuesday Office Hours,Open Discussion,OPENCODING
+84,https://www.meetup.com/Scala-Portugal/events/219253592/,219253592,An Introduction to the Typesafe Stack: Play & Akka,Talks by Domain Experts,OPENCODING
+85,https://www.meetup.com/SUPAProductTalks/events/162910532/,162910532,Developer Week Conference & Expo Feb 15-21,Conferences,OPENCODING
+86,https://www.meetup.com/learntocodeinmiamiwithwyncode/events/234831896/,234831896,Wyncode Miami Pitch Day 11,Talks by Domain Experts,OPENCODING
+87,https://www.meetup.com/LouisvilleMakesGames/events/245098265/,245098265,Ludum Dare 40 (See description for dinner details),Competitions,OPENCODING
+88,https://www.meetup.com/API-Craft-San-Francisco/events/234335331/,234335331,January 2017 Meetup,Talks by Domain Experts,OPENCODING
+89,https://www.meetup.com/DFWScrum/events/227916017/,227916017,User Story Mapping,Talks by Domain Experts,OPENCODING
+90,https://www.meetup.com/Windy-City-Tech-Meetup/events/235968811/,235968811,Tis the Season to be Jolly and Network!,Social Events,OPENCODING
+91,https://www.meetup.com/EuregioTechMeetup/events/234074284/,234074284,Blockchain Introduction & Workshop,Talks by Domain Experts,OPENCODING
+92,https://www.meetup.com/dallasphp/events/72059392/,72059392,Chris Cornutt - Agile Applications with ExtJS + Zend Framework,Talks by Domain Experts,OPENCODING
+93,https://www.meetup.com/Practical-Introduction-to-Python-Programming/events/240447982/,240447982,Python for Data Science (2 sessions),Hands-on Sessions,OPENCODING
+94,https://www.meetup.com/WaikatoLinuxUsersGroup/events/196352072/,196352072,Linux Saturday Workshop,Hands-on Sessions,OPENCODING
+95,https://www.meetup.com/opentechschool-zurich/events/233922300/,qnmmvlyvmbbc,Learning C++ as a beginner,Others,OPENCODING
+96,https://www.meetup.com/JavaScript-Workshops-LA/events/227806794/,227806794,Workshop: JavaScript Full Stack Weekender,Hands-on Sessions,OPENCODING
+97,https://www.meetup.com/Women-Who-Code-LA/events/235739609/,rskvdmywcbwb,Learn Python (Beginners) in the SFV!,Hands-on Sessions,OPENCODING
+98,https://www.meetup.com/Le-Wagon-Shanghai-Coding-Station/events/235407801/,235407801,[Workshop] Technical workflow in Startups,Talks by Domain Experts,OPENCODING
+99,https://www.meetup.com/NYTechTank/events/204474162/,204474162,"Jobs in Banking, Finance & Venture Capital- A Career Roundtable for Job Seekers",Job Fair,OPENCODING
+100,https://www.meetup.com/London-Cambridge-Spark/events/233207740/,233207740,Introduction to Data Science in Python Bootcamp,Hands-on Sessions,OPENCODING
+101,https://www.meetup.com/Girl-Develop-It-Boulder-Denver/events/244491885/,244491885,Career Fair & Speed Mentoring with Megan Smith 3rd CTO United States - DENVER,Job Fair,OPENCODING
+102,https://www.meetup.com/Australian-Umbraco-Meetups/events/231879125/,dvfmkkyvkbhb,Melbourne Umbracian Meetup,Talks by Domain Experts,OPENCODING
+103,https://www.meetup.com/Boston-Predictive-Analytics/events/60294452/,60294452,Web Content Recommendations using Bayesian Classification via Apache Mahout,Talks by Domain Experts,OPENCODING
+104,https://www.meetup.com/Girl-Develop-It-Philadelphia/events/244911071/,244911071,Teaching Meetup,Administrative Events,Labeler 2
+105,https://www.meetup.com/The-Sydney-Limited-WIP-Society/events/152021102/,152021102,End of year get together and retrospective,Administrative Events,Labeler 2
+106,https://www.meetup.com/Austin-Hispanic-Hackers-Meetup/events/224519985/,224519985,Austin Diversity Hackathon,Competitions,Labeler 2
+107,https://www.meetup.com/Codetrotters/events/241173911/,ldkvdmywkbhb,Location Change tomorrow Hack Nights at Parallel18,Competitions,Labeler 2
+108,https://www.meetup.com/London-Clojurians/events/235301800/,235301800,ClojureX - London Clojurians Conference @ SkillsMatter,Conferences,Labeler 2
+109,https://www.meetup.com/Girl-Develop-It-Phoenix/events/235111300/,235111300,GDI Crashes: CSSDay.io,Conferences,Labeler 2
+110,https://www.meetup.com/Dallas-Big-Data-Science/events/245581654/,245581654,H2O World 2017,Conferences,Labeler 2
+111,https://www.meetup.com/munich-software-craft-community/events/222052212/,222052212,5th International Software Craftsmanship and Testing Conference in Germany,Conferences,Labeler 2
+112,https://www.meetup.com/Girl-Develop-It-Pittsburgh/events/231648226/,231648226,Intermediate HTML/CSS Class,Hands-on Sessions,Labeler 2
+113,https://www.meetup.com/prodeskspace/events/228713621/,228713621,Learn Wordpress and SEO,Hands-on Sessions,Labeler 2
+114,https://www.meetup.com/Women-Who-Code-DC/events/227440158/,jsdsnlyvcbpb,Front End Hack Night - Intro to Git,Hands-on Sessions,Labeler 2
+115,https://www.meetup.com/Learning-to-Code-Amsterdam/events/242822355/,wwjdrnywmbqb,Learn to code - together!,Hands-on Sessions,Labeler 2
+116,https://www.meetup.com/The-Big-Data-Meetup/events/244304331/,244304331,IBM Data Science Workshop @PolyU,Hands-on Sessions,Labeler 2
+117,https://www.meetup.com/SweetlakePHP/events/219244473/,xxwsdlytcbkc,SweetlakePHP DEV,Hands-on Sessions,Labeler 2
+118,https://www.meetup.com/techacademy/events/243531296/,243531296,Free One-Day Course on Introduction to Web Design with HTML & CSS - 9/25,Hands-on Sessions,Labeler 2
+119,https://www.meetup.com/hackreactor/events/223290053/,223290053,[SOLD OUT] Reactor Prep:  Front End Web Development Basics,Hands-on Sessions,Labeler 2
+120,https://www.meetup.com/Le-Wagon-Chengdu/events/239452062/,239452062,Learn to Code a Landing Page in 2 Hours,Hands-on Sessions,Labeler 2
+121,https://www.meetup.com/RedMountainMakers/events/193853632/,193853632,Basic Linux training ,Hands-on Sessions,Labeler 2
+122,https://www.meetup.com/Farset-Labs-Events/events/236020828/,236020828,Global Game Jam (Belfast) 2017,Hands-on Sessions,Labeler 2
+123,https://www.meetup.com/Chicostart-Meetups/events/249197322/,249197322,Free Code Camp,Hands-on Sessions,Labeler 2
+124,https://www.meetup.com/sacruby/events/238618972/,qgdwtfywgbbc,The Sacramento Ruby Meetup Monthly Meetup,Hands-on Sessions,Labeler 2
+125,https://www.meetup.com/Lucky-We-Code-Hawaii/events/236997832/,236997832,Global Game Jam 2017,Hands-on Sessions,Labeler 2
+126,https://www.meetup.com/Bergen-Nerdschool/events/225198496/,225198496,Introduction to shell script,Hands-on Sessions,Labeler 2
+127,https://www.meetup.com/Women-Who-Code-SF/events/220905004/,220905004,Java Study Group,Hands-on Sessions,Labeler 2
+128,https://www.meetup.com/Cognitive-Toronto/events/221476447/,221476447,Hands-on: IBM Analytics and Internet of Things (IoT) Workshop,Hands-on Sessions,Labeler 2
+129,https://www.meetup.com/learn-to-code-in-atlanta-digitalcrafts/events/245736252/,245736252,Accountants Can Use Javascript Too! ,Hands-on Sessions,Labeler 2
+130,https://www.meetup.com/rails-plus/events/230709907/,xdzbtlyvjbkb,Ruby Problem Set Series,Hands-on Sessions,Labeler 2
+131,https://www.meetup.com/React-Seoul/events/230458496/,qjpvplyvgbnc,Chat & React: lets explore React and React-Native,Open Discussion,Labeler 2
+132,https://www.meetup.com/Net-Study-Group/events/114917132/,114917132,Advanced Topics,Open Discussion,Labeler 2
+133,https://www.meetup.com/Exeter-NET-Meetup/events/232448762/,232448762,September - Hot Topics ,Open Discussion,Labeler 2
+134,https://www.meetup.com/CPHEX-Copenhagen-Elixir/events/241029174/,241029174,Copenhagen Elixir and Erlang Meet Up June 2017,Open Discussion,Labeler 2
+135,https://www.meetup.com/ironhack-barcelona/events/230397249/,230397249,Ironhack & Friends - Chapter 1:  The future of the start-up developer in Spain,Open Discussion,Labeler 2
+136,https://www.meetup.com/cppmsg_cpp/events/234198560/,tzzpzlyvnbkb,Online Friday: Modern C++ Q&A - Stroustrups Programming Book PPP ch.9 CppMSG,Open Discussion,Labeler 2
+137,https://www.meetup.com/brisjvm/events/28640721/,cqtzrypmbjb,Power Tools Roundtable,Open Discussion,Labeler 2
+138,https://www.meetup.com/raleighrb/events/4872133/,4872133,The Raleigh-area Ruby Brigade (raleigh.rb) April Meetup,Open Discussion,Labeler 2
+139,https://www.meetup.com/Developers-Entrepreneurs/events/219215101/,qkjcdlytnbkc,Got a Problem? -> Get a Solution! #OpenMic,Open Discussion,Labeler 2
+140,https://www.meetup.com/Baltimore-UX-Meetup/events/229800284/,229800284,Peer-to-Peer UX Design Review,Open Discussion,Labeler 2
+141,https://www.meetup.com/PyLadiesSF/events/164463042/,dkbkthysdbxb,Study group: Learn Python together!,Open Discussion,Labeler 2
+142,https://www.meetup.com/UK-Hackathons-and-Jams/events/247279106/,247279106,Citidata Hack,Others,Labeler 2
+143,https://www.meetup.com/Cocoaheads-Phoenix-Scottsdale/events/232424405/,232424405,NSCoderNight,Open Discussion,Labeler 2
+144,https://www.meetup.com/Chicostart-Meetups/events/247552676/,247552676,Startup Workshop:   Intro to print design and logo basics,Others,Labeler 2
+145,https://www.meetup.com/MoedegruppeFunktionelleKoebenhavnere/events/248744530/,rqbcdlyxfbkc,MF#K: Meetup cancelled. Please go to Elm Elm Hack Night with Evan Czaplicki,Others,Labeler 2
+146,https://www.meetup.com/Adelaide-AgTech-Meetup/events/229277582/,229277582,Ag-Tech Adelaide Meetup,Others,Labeler 2
+147,https://www.meetup.com/wmdotnet/events/212651802/,212651802,PowerShell SIG,Open Discussion,Labeler 2
+148,https://www.meetup.com/Girl-Geek-Academy/events/193662112/,193662112,Girl Geek Academy Workshop - Pitching,Others,Labeler 2
+149,https://www.meetup.com/techacademy/events/233382340/,233382340,Tech Academy presents Code Oregon Careers,Job Fair,Labeler 2
+150,https://www.meetup.com/Miami-Software-Development-Meetup/events/234532767/,234532767,Get IT Certifications for Free through WIOA Grant. Learn How!,Others,Labeler 2
+151,https://www.meetup.com/LAHackers/events/213748432/,dsdnrkysnbcc,How to Start a Startup,Open Discussion,Labeler 2
+152,https://www.meetup.com/SyncHerts/events/217532812/,217532812,Happy MARSmas!,Others,Labeler 2
+153,https://www.meetup.com/Women-Who-Code-Reno-Tahoe/events/117469352/,dbjjtfyrhblb,Study Group,Open Discussion,Labeler 2
+154,https://www.meetup.com/Thinkful-Pasadena/events/242828660/,242828660,Become a Data Scientist: Thinkful Info Session,Others,Labeler 2
+155,https://www.meetup.com/noisebridge/events/247190094/,247190094,Bag Making Hackathon Monday,Others,Labeler 2
+156,https://www.meetup.com/Lafayette-CO-Tech/events/222818909/,dbwhhlytkbkc,Make a Giant Working Puppet! - Paula,Others,Labeler 2
+157,https://www.meetup.com/gdgcloudcalgary/events/248364619/,248364619,Achieve Inbox Zero with the Cloud Productivity Lunch Series,Hands-on Sessions,Labeler 2
+158,https://www.meetup.com/young-bostonians-20s-30s/events/247724673/,247724673,Join a Social Indoor Kickball League {Starts 3/17},Others,Labeler 2
+159,https://www.meetup.com/SFInvestors/events/231691797/,231691797,Americas Greatest Maker: Winner of $1M Prize & Reality TV Show on TBS,Others,Labeler 2
+160,https://www.meetup.com/General-Assembly-Seattle/events/237438582/,237438582,MARKETING THROUGH PINTEREST: CREATING AND EXECUTING A STRATEGY,Others,Labeler 2
+161,https://www.meetup.com/splatspace/events/64052532/,64052532,Libre Culture Day Celebration,Others,Labeler 2
+162,https://www.meetup.com/Mozilla-Meetup-Switzerland/events/243387231/,243387231,Firefox Quantum Sprint - Help make Firefox Quantum succeed,Others,Labeler 2
+163,https://www.meetup.com/SFInvestors/events/226083399/,226083399,FREE: Lifograph VIP mixer and costume party for investors and founders,Others,Labeler 2
+164,https://www.meetup.com/nextech/events/119235572/,119235572,Welcome to a world through Glass,Talks by Domain Experts,Labeler 2
+165,https://www.meetup.com/RedMountainMakers/events/236808399/,pprhvlywcbtb,Show & Tell,Others,Labeler 2
+166,https://www.meetup.com/Nottingham-Derby-BCS-Branch/events/219697961/,219697961,Developing individual and team competencies through NLP by Peter Parkes,Others,Labeler 2
+167,https://www.meetup.com/Stamford-Innovation-Center-Meetup/events/233444024/,233444024,CT Commission on Economic Competitiveness Roundtable,Others,Labeler 2
+168,https://www.meetup.com/Ace-Monster-Toys/events/231916356/,231916356,Fusion360 for Hackerspaces,Others,Labeler 2
+169,https://www.meetup.com/Long-Island-Drupal-Group/events/245536585/,245536585,Long Island Drupal End of Year Party,Social Events,Labeler 2
+170,https://www.meetup.com/Melbourne-Web-Developers/events/95172882/,95172882,A christmas drinkup!,Social Events,Labeler 2
+171,https://www.meetup.com/GOTO-Nights-CPH/events/174873852/,174873852,Community Managers get together!,Social Events,Labeler 2
+172,https://www.meetup.com/HackerNestVAN/events/161748712/,161748712,HackerNestVAN February Tech Social-Limited Space,Social Events,Labeler 2
+173,https://www.meetup.com/Perth-iOS/events/30868941/,30868941,NSDrinking,Social Events,Labeler 2
+174,https://www.meetup.com/sandiegojs/events/248984886/,fqgtqlyxgbsb,SDJS Social,Social Events,Labeler 2
+175,https://www.meetup.com/Elastic-NL/events/219020029/,219020029,Sinterklaas/X-Mas/Hanukkah drinks,Social Events,Labeler 2
+176,https://www.meetup.com/Buckeye-Cocoa/events/12567181/,12567181,Cocoa Programming Meetup,Talks by Domain Experts,Labeler 2
+177,https://www.meetup.com/PerthDotNet/events/226365203/,226365203,DevJam 2015,Talks by Domain Experts,Labeler 2
+178,https://www.meetup.com/DevTank/events/91338592/,91338592,DevTank November,Talks by Domain Experts,Labeler 2
+179,https://www.meetup.com/LondonSalesforceDevelopers/events/78745732/,78745732,Teardown of what happened at DFX and a special guest from salesforce.com!,Talks by Domain Experts,Labeler 2
+180,https://www.meetup.com/DublinJS/events/127011262/,qmbfxfyrlbjb,Monthly dublinjs meetup,Talks by Domain Experts,Labeler 2
+181,https://www.meetup.com/AndroidAlameda/events/13480849/,13480849,Android Web Application Development with PhoneGap,Talks by Domain Experts,Labeler 2
+182,https://www.meetup.com/nycpython/events/110055922/,qrlhhfyrgbmb,Weekly Office Hours (watch this page for weekly topic annoucnements),Talks by Domain Experts,Labeler 2
+183,https://www.meetup.com/Software-QA-Testing-Meetup/events/230253885/,230253885,Cucumber as a Collaboration Tool,Talks by Domain Experts,Labeler 2
+184,https://www.meetup.com/J-Dynamic-Functional-Programming/events/70126502/,dtzdnyqkbnb,J Dynamic Functional Programming Monthly Meetup,Talks by Domain Experts,Labeler 2
+185,https://www.meetup.com/big-data-london/events/196370742/,196370742,25th Big Data London Meetup - with S2DS at University of Westminster,Talks by Domain Experts,Labeler 2
+186,https://www.meetup.com/All-Things-API/events/225928733/,225928733,API Definitions: Source of Truth for Tests,Talks by Domain Experts,Labeler 2
+187,https://www.meetup.com/localvariables/events/236760638/,236760638,Local Variables Meetup: Azure Machine Learning,Talks by Domain Experts,Labeler 2
+188,https://www.meetup.com/General-Assembly-Austin/events/235584315/,235584315,Lightning Talks: Product Management Tools,Talks by Domain Experts,Labeler 2
+189,https://www.meetup.com/Le-Wagon-Tokyo-Coding-Station/events/237513235/,237513235,UI & Design Crash Course,Talks by Domain Experts,Labeler 2
+190,https://www.meetup.com/The-Minneapolis-St-Paul-Magento-Meetup/events/226034508/,226034508,Magento 2: An Overview,Talks by Domain Experts,Labeler 2
+191,https://www.meetup.com/Financial-Technology-Switzerland-Meetup/events/192372002/,192372002,FinTech Switzerland in Geneva -  Eat and Meet #1,Talks by Domain Experts,Labeler 2
+192,https://www.meetup.com/Share-IT-Sarajevo/events/239871421/,239871421,Tech support  Get the big picture,Talks by Domain Experts,Labeler 2
+193,https://www.meetup.com/TechMeetupspace/events/225061515/,225061515,Dublin Lampstack User Group - Building Cloud Apps the Right Way,Talks by Domain Experts,Labeler 2
+194,https://www.meetup.com/Munich-Rubyshift-Ruby-User-Group/events/231711877/,drpzdgyvkbrb,Ruby User Group Meetup,Talks by Domain Experts,Labeler 2
+195,https://www.meetup.com/AmsterdamPHP/events/68809872/,qnrswcyqlbvb,Monthly Meeting - August/2012,Talks by Domain Experts,Labeler 2
+196,https://www.meetup.com/Austin-iPhone-Developer-Group/events/230738335/,dvdljfyvjbkb,Austin iPhone Developer Group Meetup,Talks by Domain Experts,Labeler 2
+197,https://www.meetup.com/Zalando-Tech-Events-Berlin/events/231911415/,231911415,Zalando Techspert Series #2 - Customers Dont Know What They Want,Talks by Domain Experts,Labeler 2
+198,https://www.meetup.com/Santa-Monica-New-Tech/events/163651382/,163651382,SM New Tech Meetup March 2014 #SMNT19,Talks by Domain Experts,Labeler 2
+199,https://www.meetup.com/python-atlanta/events/186265752/,drdkldyskbnb,Python Atlanta Meetup,Talks by Domain Experts,Labeler 2
+200,https://www.meetup.com/ColoradoMicrosoftDevelopers/events/151510582/,151510582,Modern Application Development Leveraging the Cloud with Visual Studio 2013,Talks by Domain Experts,Labeler 2
+201,https://www.meetup.com/stl-ios/events/219863261/,219863261,Kickoff Event,Talks by Domain Experts,Labeler 2
+202,https://www.meetup.com/Vienna-Mobile-Quality-Crew-Meetup/events/166187192/,166187192,Mobile Quality Hangout: Best Practices in Mobile App Testing,Talks by Domain Experts,Labeler 2
+203,https://www.meetup.com/austinpython/events/136551832/,wqszqyrnbmb,The Austin Python Meetup Monthly Meetup,Talks by Domain Experts,Labeler 2
+204,https://www.meetup.com/Adelaide-dotNET/events/237629165/,237629165,VS 2017 launch Chocolatey with David Gardiner + IoT with Jack Ni,Talks by Domain Experts,Labeler 2
+205,https://www.meetup.com/Sydney-NET-User-Group/events/118300742/,118300742,SSW - FREE Webinar - Building Single Page Applications with ASP.NET MVC 4,Talks by Domain Experts,Labeler 2
+206,https://www.meetup.com/pythonireland/events/220334614/,qwfbshytgblb,Python Ireland April meetup,Talks by Domain Experts,Labeler 2
+207,https://www.meetup.com/NIWUG-Norwegian-Information-Worker-User-Group-Meetup/events/237927844/,237927844,Webinar - Getting Started with PowerApps Galleries,Talks by Domain Experts,Labeler 2
+208,https://www.meetup.com/KC-NET-User-Group/events/222789462/,222789462,Supporting Multiple Devices in Windows 10: Using the UAP,Talks by Domain Experts,Labeler 2
+209,https://www.meetup.com/Pune-Salesforce-Developer-User-Group/events/245825778/,245825778,Einstein and Lightning meetup,Talks by Domain Experts,Labeler 2
+210,https://www.meetup.com/SydPHP/events/196942932/,196942932,V.Zero Blockify and Unit Testing Legacy Code,Talks by Domain Experts,Labeler 2
+211,https://www.meetup.com/Code-for-Newark/events/220570812/,220570812,Data Day 2015 Center for Cooperative Media at MU,Talks by Domain Experts,Labeler 2
+212,https://www.meetup.com/Riverside-Ruby-User-Group/events/222781845/,bvvsglytjbgc,Riverside Ruby Meetup,Talks by Domain Experts,Labeler 2
+213,https://www.meetup.com/CloudxLab/events/224562637/,224562637,Introduction to Apache Spark & Hadoop,Talks by Domain Experts,Labeler 2
+214,https://www.meetup.com/Open-Mastery-Austin/events/231697500/,231697500,Presentation: Data-Driven Software Mastery,Talks by Domain Experts,Labeler 2
+215,https://www.meetup.com/DC-Tech-Meetup/events/16681164/,wzphqypkbhb,DC Tech Meetup #5: Sports Entertainment & Media Edition,Talks by Domain Experts,Labeler 2
+216,https://www.meetup.com/Linux-Users-of-Victoria/events/229574147/,229574147,LUV Beginners March Meeting: Version control systems from Xanadu to git,Talks by Domain Experts,Labeler 2
+217,https://www.meetup.com/Hong-Kong-Internet-of-Things-Association-HKIOTA/events/233711742/,233711742,6th DBSxCAL TALK: Connect the IoT - Building a Smarter World,Talks by Domain Experts,Labeler 2
+218,https://www.meetup.com/Girl-Develop-It-Ann-Arbor/events/186814332/,186814332,Tech 101,Talks by Domain Experts,Labeler 2
+219,https://www.meetup.com/NoCoNET/events/238243842/,rckflmywgbnb,Writing Concurrent Applications without the Headaches of Locks,Talks by Domain Experts,Labeler 2
+220,https://www.meetup.com/23bshop/events/232540396/,232540396,DEFCON-IS-CANCELLED Potluck / Machine Shop Demo,Hands-on Sessions,Labeler 1
+221,https://www.meetup.com/aadndevs/events/233942962/,233942962,Game Development with Unity,Talks by Domain Experts,Labeler 1
+222,https://www.meetup.com/acloud/events/219809181/,rtntpytgbsb,Topic: Microservices Overview,Open Discussion,Labeler 1
+223,https://www.meetup.com/agiletesting/events/188258772/,188258772,Next Generation Testing - 26th June 2014,Conferences,Labeler 1
+224,https://www.meetup.com/AlbuquerqueJavaUsersGroup/events/239869230/,cvhmrmywjbjb,Java SE EE WS Coding Lab,Hands-on Sessions,Labeler 1
+225,https://www.meetup.com/Angular-Nights/events/242325994/,242325994,Angular for Beginners Workshop,Hands-on Sessions,Labeler 1
+226,https://www.meetup.com/ApolloMeteorNYC/events/113616192/,113616192,Get an introduction to Meteor!,Social Events,Labeler 1
+227,https://www.meetup.com/Atlanta-FlatironSchool/events/246164041/,246164041,Beginners Guide: Breaking into Tech,Others,Labeler 1
+228,https://www.meetup.com/Austin-Pair-Programming-Circle/events/218735786/,ddzxclysqbhb,A MEAN Stack App - The Pair Programming Exchange,Hands-on Sessions,Labeler 1
+229,https://www.meetup.com/aws-cologne/events/229261459/,229261459,Cologne AWS User Group (2016-03),Talks by Domain Experts,Labeler 1
+230,https://www.meetup.com/AWS-SANFRANCISCO/events/241383998/,241383998,VC 201 for Startups: The Investment Memo,Hands-on Sessions,Labeler 1
+231,https://www.meetup.com/baltimoremobile/events/203844042/,dnlrwhysmbrb,Android Development for Beginners,Hands-on Sessions,Labeler 1
+232,https://www.meetup.com/BarcampTampaBay/events/50219302/,50219302,Personal Branding,Talks by Domain Experts,Labeler 1
+233,https://www.meetup.com/BitcoinNYC/events/154935472/,154935472,Bitcoin Christmas Party,Social Events,Labeler 1
+234,https://www.meetup.com/BitcoinNYC/events/158920372/,158920372,The bitcoin Basics,Talks by Domain Experts,Labeler 1
+235,https://www.meetup.com/BitcoinNYC/events/223698902/,223698902,Full Nodes DIY - How to Set one up and how to build one.,Hands-on Sessions,Labeler 1
+236,https://www.meetup.com/BITSPACE/events/224554288/,224554288,Crossbow Connect @ BITSPACE,Talks by Domain Experts,Labeler 1
+237,https://www.meetup.com/Black-Technology-Professionals-BTP-NY/events/224615556/,224615556,African American Professionals Networking Event: Climbing the Corporate Ladder,Job Fair,Labeler 1
+238,https://www.meetup.com/blocks-bits-and-crypto/events/223679747/,223679747,Tuesday!! Web Performance Delivered: OReilly Webinar - 1 PM ET,Talks by Domain Experts,Labeler 1
+239,https://www.meetup.com/bmorejs/events/15991827/,15991827,Sencha Touch and jQuery Mobile,Talks by Domain Experts,Labeler 1
+240,https://www.meetup.com/CandiDateCodeCrush/events/229609766/,229609766,Hands-On Clojure Night (Center City),Hands-on Sessions,Labeler 1
+241,https://www.meetup.com/Chef-Meetup/events/229873376/,zddmflyvjbcc,Chef Meetup,Talks by Domain Experts,Labeler 1
+242,https://www.meetup.com/Chicago-Agile-Open-Space/events/57803142/,ddltrcyqpbrb,Working as a Distributed Team.,Talks by Domain Experts,Labeler 1
+243,https://www.meetup.com/ChickTech-Orange-County/events/241870385/,241870385,ChickTech Presents: Starting a Business at Home- Growing Without Capital,Others,Labeler 1
+244,https://www.meetup.com/Chicostart-Meetups/events/244518998/,ftztllywpbcc,Chicostart Tech Talks,Others,Labeler 1
+245,https://www.meetup.com/CincyNg-Cincinnati-AngularJS-Meetup/events/219850924/,219850924,Talk about Material Design,Talks by Domain Experts,Labeler 1
+246,https://www.meetup.com/Code-for-Philly/events/245681632/,245681632,Code for Philly 101,Hands-on Sessions,Labeler 1
+247,https://www.meetup.com/codelearn-hk/events/244404133/,244404133,Code chat and drinks #57,Open Discussion,Labeler 1
+248,https://www.meetup.com/CoderDojoTo/events/234431686/,234431686,Mentor kids at TPLs BookBash @ Harbourfront,Hands-on Sessions,Labeler 1
+249,https://www.meetup.com/Connecticut-FileMaker-Developers-Group-CFDG/events/227893904/,227893904,CFDG Meeting,Talks by Domain Experts,Labeler 1
+250,https://www.meetup.com/CRIneta-Cedar-Rapids-NET-User-Group/events/210869062/,210869062,One Delegate to Rule Them All: Understanding OWIN - Keith Dahlby,Talks by Domain Experts,Labeler 1
+251,https://www.meetup.com/DBC-NYC/events/225240334/,225240334,JavaScript for Beginners: Building Interactive Web Apps on the Frontend,Hands-on Sessions,Labeler 1
+252,https://www.meetup.com/DBC-NYC/events/229497546/,229497546,Building a Career and Company: A talk with Roomi CEO Ajay Yadav,Talks by Domain Experts,Labeler 1
+253,https://www.meetup.com/dcpython/events/171421392/,171421392,May 2014 Meetup - Andrea Gallego and Pandas for Data Analysis,Talks by Domain Experts,Labeler 1
+254,https://www.meetup.com/dcruby/events/19812521/,pfcfxyppbnb,November DCRUG: Lightning Talks!,Talks by Domain Experts,Labeler 1
+255,https://www.meetup.com/DeRailed/events/228326197/,228326197,Celebrate our 10th anniversary!! -),Talks by Domain Experts,Labeler 1
+256,https://www.meetup.com/devCodeCamp/events/227718472/,227718472,Free Workshop: HTML/CSS for Beginners,Hands-on Sessions,Labeler 1
+257,https://www.meetup.com/Developers-of-Athens/events/236201363/,236201363,Athens Women in Tech Social - Hidden Figures screening!,Others,Labeler 1
+258,https://www.meetup.com/DevMeetUpMidwest/events/226019149/,226019149,GeoDev Meetup - Chicago IL,Social Events,Labeler 1
+259,https://www.meetup.com/DevOpsUT/events/116837292/,116837292,May DevOpsUT Meetup,Talks by Domain Experts,Labeler 1
+260,https://www.meetup.com/Ember-LA/events/236800386/,236800386,Ember LA March Meetup,Talks by Domain Experts,Labeler 1
+261,https://www.meetup.com/Erie-Creatives-and-Entrepreneurs/events/220787055/,220787055,Meet Up Just for Entrepreneurs!,Talks by Domain Experts,Labeler 1
+262,https://www.meetup.com/Farmington-Hills-Salesforce-Developer-Meetup/events/236443165/,236443165,Salesforce Apex Hours :- Trailhead Race,Open Discussion,Labeler 1
+263,https://www.meetup.com/freeCodeCamp-Greater-Sacramento-Area/events/249622305/,249622305,Code/Meet and Greet - Elk Grove,Open Discussion,Labeler 1
+264,https://www.meetup.com/full-stack-dc/events/224678503/,224678503,Full-Stack Design: Creating Mockups with Sketch App,Hands-on Sessions,Labeler 1
+265,https://www.meetup.com/FunctionalKnox/events/231705590/,pqmxtlyvjbwb,Biweekly Meetup @ The Empty Cup,Open Discussion,Labeler 1
+266,https://www.meetup.com/gctechspace/events/186175952/,qlbrfhysjbhc,Hack Night and AGM,Administrative Events,Labeler 1
+267,https://www.meetup.com/gdg-melbourne/events/202219912/,202219912,AAUG: August Meetup,Talks by Domain Experts,Labeler 1
+268,https://www.meetup.com/GDGPhilly/events/248650120/,248650120,Kotlin Study Jam - Session 1,Hands-on Sessions,Labeler 1
+269,https://www.meetup.com/General-Assembly-Austin/events/222497830/,222497830,GA ATX Happy Hour,Social Events,Labeler 1
+270,https://www.meetup.com/Girl-Develop-It-Austin/events/235890495/,235890495,Intro to JavaScript,Hands-on Sessions,Labeler 1
+271,https://www.meetup.com/Girl-Develop-It-Los-Angeles/events/234181153/,234181153,Introduction to JavaScript -- JavaScript Weekend Saturday and Sunday!,Hands-on Sessions,Labeler 1
+272,https://www.meetup.com/Girl-Develop-It-Phoenix/events/242173093/,sswdwmywnbgc,Code and Coffee,Open Discussion,Labeler 1
+273,https://www.meetup.com/Girl-Develop-It-San-Francisco/events/178963672/,178963672,GirlDevelopIt at Google I/O (Role Call!),Conferences,Labeler 1
+274,https://www.meetup.com/Google-Developer-Group-Hamburg/events/237874038/,237874038,Cloud GDG - StackDriver: From Monitoring to Logging to Error Reporting,Talks by Domain Experts,Labeler 1
+275,https://www.meetup.com/google-developer-group-san-francisco/events/47556102/,47556102,Mobile HTML5 Codelab | #GTUGsf,Hands-on Sessions,Labeler 1
+276,https://www.meetup.com/GOTO-Nights-Jutland/events/248093614/,248093614,Serverless on Azure - Experiences Challenges and Successes,Talks by Domain Experts,Labeler 1
+277,https://www.meetup.com/Greater-Boston-Coding-Dojo/events/244737898/,244737898,MOVED TO 11/7: Coding Dojo - TDD using Mob Programming (Burlington),Hands-on Sessions,Labeler 1
+278,https://www.meetup.com/hackeriet/events/208569912/,dnhfrcysnbpb,Hack on Caturday: hang out and get aquainted,Others,Labeler 1
+279,https://www.meetup.com/Hacks-Hackers-Canterbury/events/72190712/,dgkjcdyqmbfb,Hacks/Hackers Monthly Meetup,Talks by Domain Experts,Labeler 1
+280,https://www.meetup.com/HawaiiAgile/events/241119037/,241119037,AngelHack Global Hackathon Series: Honolulu - Free for our Meetup Members,Competitions,Labeler 1
+281,https://www.meetup.com/IBCG-Blockchain-Community/events/241838747/,241838747,Special Blockchain Event: ICO  ?,Others,Labeler 1
+282,https://www.meetup.com/IBM-Cloud-KSA/events/247506907/,247506907,IBM Cloud Day @ Sahabat AlImam,Hands-on Sessions,Labeler 1
+283,https://www.meetup.com/IndyAWS/events/236864015/,gqdhlmywdblc,Meeting of the IndyAWS Group,Talks by Domain Experts,Labeler 1
+284,https://www.meetup.com/indysa/events/231334859/,qwzjzfyvkbcc,Fishbowl: Dealing with an increasingly mobile workforce,Open Discussion,Labeler 1
+285,https://www.meetup.com/itforumgc/events/239228807/,239228807,Who Owns Your Website? Who Owns Your Code?,Talks by Domain Experts,Labeler 1
+286,https://www.meetup.com/IT-Training/events/245987374/,245987374,Angular 2 Bootcamp,Hands-on Sessions,Labeler 1
+287,https://www.meetup.com/javascript-southbay/events/151266462/,151266462,Introduction & Module #1,Hands-on Sessions,Labeler 1
+288,https://www.meetup.com/JavaScript-Zagreb/events/239534839/,239534839,NodeSchool MOP,Others,Labeler 1
+289,https://www.meetup.com/Krakow-Ruby-Users-Group/events/107347882/,107347882,Meeting #2/2013 - JS/CS acceptance testing for Rails & Webmachine (Ruby),Talks by Domain Experts,Labeler 1
+290,https://www.meetup.com/London-Haskell/events/128576272/,128576272,Haskell Lightning Talks,Open Discussion,Labeler 1
+291,https://www.meetup.com/London-Scrum-Meetup/events/248509248/,248509248,Themes in Our Lives - with Colin Brett,Talks by Domain Experts,Labeler 1
+292,https://www.meetup.com/London-WordPress/events/231337503/,231337503,WordPress London Meetup - May,Talks by Domain Experts,Labeler 1
+293,https://www.meetup.com/lvpython/events/238429578/,qvrwxlywgbpb,Sewing Containers,Talks by Domain Experts,Labeler 1
+294,https://www.meetup.com/Meteor-London/events/220779694/,220779694,Sound the alarm! Its Meteor London,Talks by Domain Experts,Labeler 1
+295,https://www.meetup.com/mssgug/events/243796215/,243796215,Building PowerShell GUI with SAPIEN PowerShell Studio,Hands-on Sessions,Labeler 1
+296,https://www.meetup.com/new-england-engineers/events/240865989/,240865989,AI for Software Engineers,Hands-on Sessions,Labeler 1
+297,https://www.meetup.com/New-Relic-FutureTalks-PDX/events/233044273/,233044273,FutureTalk with Kelsey Hightower,Talks by Domain Experts,Labeler 1
+298,https://www.meetup.com/node-dc/events/187038062/,187038062,Hello World of Node Modules,Hands-on Sessions,Labeler 1
+299,https://www.meetup.com/NorthDallasCoworking/events/218664195/,jqjpclyspbxb,SEO Office Hours w/ Heroic Search,Talks by Domain Experts,Labeler 1
+300,https://www.meetup.com/NYC-Health-Data-Scientists/events/237666094/,237666094,Meet investors present deals,Others,Labeler 1
+301,https://www.meetup.com/NYC-Magento-Developers/events/219674962/,219674962,NYC Magento January Meetup,Talks by Domain Experts,Labeler 1
+302,https://www.meetup.com/NYC-Turquoise/events/12336575/,12336575,Soccer Game on 52 St.,Social Events,Labeler 1
+303,https://www.meetup.com/Open-San-Diego/events/238122419/,wfzwjmywgbgb,Open San Diego - Everyone welcome!,Others,Labeler 1
+304,https://www.meetup.com/op-tech-talk/events/243392064/,243392064,Cracking the Code to Secure Software,Talks by Domain Experts,Labeler 1
+305,https://www.meetup.com/Orlando-iOS-Developer-Group/events/239936952/,239936952,iOS May Meetup ,Talks by Domain Experts,Labeler 1
+306,https://www.meetup.com/OWASP-Boulder/events/59384722/,59384722,Denver Chapter - April Meeting,Talks by Domain Experts,Labeler 1
+307,https://www.meetup.com/PhillyCocoaHeads/events/222711398/,222711398,WWDC Keynote Live Stream @ Apple Store,Others,Labeler 1
+308,https://www.meetup.com/Phoenix-Python-Meetup-Group/events/234022966/,234022966,Working with Unicode in Python,Talks by Domain Experts,Labeler 1
+309,https://www.meetup.com/phoenix-version-control/events/221310511/,221310511,GitHub Fundamentals,Talks by Domain Experts,Labeler 1
+310,https://www.meetup.com/PHP-FRL/events/223807925/,223807925,PHP.FRL August 2015 Meetup,Talks by Domain Experts,Labeler 1
+311,https://www.meetup.com/Plone-Users-Group/events/102602462/,102602462,Mini sprint work session,Open Discussion,Labeler 1
+312,https://www.meetup.com/Portland-DevOps-GroundUp/events/233455958/,233455958,Panel Discussion on the Four Pillars of DevOps,Talks by Domain Experts,Labeler 1
+313,https://www.meetup.com/python-14/events/45094922/,cscdnyqcbwb,PyHou - Oil & Gas Industry Essential Tools - Houston Python Enthusiasts! Meetup,Talks by Domain Experts,Labeler 1
+314,https://www.meetup.com/raleighrb/events/227134556/,227134556,Testing Server and Network Infrastructure using Ruby,Talks by Domain Experts,Labeler 1
+315,https://www.meetup.com/sandiegojs/events/227435414/,fnjrclyvdbvb,BYOP Night,Open Discussion,Labeler 1
+316,https://www.meetup.com/San-Francisco-Adobe-Experience-Cloud/events/172603892/,172603892,How to integrate SAP Hybris with Adobe CQ (AEM)?,Talks by Domain Experts,Labeler 1
+317,https://www.meetup.com/San-Francisco-Perl/events/9442341/,9442341,March SF.pm meeting,Talks by Domain Experts,Labeler 1
+318,https://www.meetup.com/scala-vienna/events/205107252/,205107252,Functional Programming Study Group #10,Open Discussion,Labeler 1
+319,https://www.meetup.com/Sea-Tech-Forum/events/246716487/,246716487,[Partner Event] Achieving DevSecOps in Public Cloud,Talks by Domain Experts,Labeler 1
+320,https://www.meetup.com/Seattle-Hackathons/events/226640486/,226640486,Women Student Hackathon by Facebook,Competitions,Labeler 1
+321,https://www.meetup.com/siliconalleycouncil/events/241393133/,241393133,Bottomless Tequila & Tacos Birthday Party!,Social Events,Labeler 1
+322,https://www.meetup.com/SiliconValley-Microsoft-Data-Platform/events/209750192/,209750192,Introduction to Wait Types and Response Time Analysis,Talks by Domain Experts,Labeler 1
+323,https://www.meetup.com/SoftDev/events/16818748/,pzqvsyplbkb,Mayank Srivastava presents MVC 3 (Part 2) at the Microsoft Store in Oakbrook,Talks by Domain Experts,Labeler 1
+324,https://www.meetup.com/Software-Development-Lifecycle-Complete/events/240634631/,240634631,Rise of the Machines - Discuss Discuss & Discuss,Talks by Domain Experts,Labeler 1
+325,https://www.meetup.com/SQL-Server-Society-of-Las-Vegas/events/229119137/,rxqxflyvgbsb,SQL Server Society of Las Vegas Monthly Meeting,Talks by Domain Experts,Labeler 1
+326,https://www.meetup.com/Stamford-Developers-Meetup/events/246551471/,246551471,StreamData.io Demo and Discussion,Talks by Domain Experts,Labeler 1
+327,https://www.meetup.com/Stamford-Innovation-Center-Meetup/events/231861901/,231861901,Yoga at SIC,Social Events,Labeler 1
+328,https://www.meetup.com/suncoast-developers-guild/events/228347649/,228347649,Girl Develop It Code & Coffee: Project Management for Fun & Profit,Talks by Domain Experts,Labeler 1
+329,https://www.meetup.com/syncnorwich/events/221419981/,221419981,SyncDevelopHER May - Karina Palyutina - Developing Habit Forming Products,Talks by Domain Experts,Labeler 1
+330,https://www.meetup.com/Tarragona-Developers-Meetup/events/228972741/,228972741,March Meetup,Talks by Domain Experts,Labeler 1
+331,https://www.meetup.com/TechLife-Ann-Arbor/events/243061883/,pqcxqlywnbsb,Code Crafstman Saturdays - Legacy Coderetreat,Hands-on Sessions,Labeler 1
+332,https://www.meetup.com/TechMeetupspace/events/233614711/,bdwlplyvmbtb,Dublin Software Craftsmanship Community,Open Discussion,Labeler 1
+333,https://www.meetup.com/Tel-Aviv-Yafo-Linux-Kernel-Meetup/events/235569722/,235569722,Linux at scale - Connectivity hacks,Talks by Domain Experts,Labeler 1
+334,https://www.meetup.com/The-Bucharest-Agile-Software-Meetup-Group/events/177530002/,177530002,Real Options (Part 2),Others,Labeler 1
+335,https://www.meetup.com/The-Code-Pub-Stockholm/events/146017432/,146017432,Thursday Code Pub #4,Hands-on Sessions,Labeler 1
+336,https://www.meetup.com/thinkful-portland/events/244730957/,244730957,Thinkful + ChickTech: Build Your Own Website with HTML/CSS,Hands-on Sessions,Labeler 1
+337,https://www.meetup.com/Tokyo-Bitcoin-Meetup-Group/events/140307882/,140307882,Bitcoin and NHK at the Pink Cow!,Others,Labeler 1
+338,https://www.meetup.com/United-Silver-Spring-Ruby/events/233968416/,233968416,Open Question Night,Open Discussion,Labeler 1
+339,https://www.meetup.com/Vancouver-Hack-Space/events/234983183/,234983183,Workshop: Design and Layout for Laser Cutting,Hands-on Sessions,Labeler 1
+340,https://www.meetup.com/VSH-Solutions-Engineering-Events/events/246602390/,246602390,How to write test cases ? Introduction session,Hands-on Sessions,Labeler 1
+341,https://www.meetup.com/Write-The-Docs-PDX/events/223897373/,223897373,All Roads Might Not Lead to Docs,Others,Labeler 1
+342,https://www.meetup.com/xD-Kansas-City/events/99008052/,99008052,You chose Responsive/Adaptive/Reactive Design Show & Tell!,Open Discussion,Labeler 1
+343,https://www.meetup.com/YYC-Rb/events/230867599/,jppjklyvmbjb,Lightning Talks!,Talks by Domain Experts,Labeler 1
+344,https://www.meetup.com/big-data-developers-in-las-vegas/events/213873132/,213873132,The Internet of Things and Geospatial Analytics Powered by InfoSphere Streams,Talks by Domain Experts,4
+345,https://www.meetup.com/DS-ProD-Boston/events/219725684/,219725684,Kickoff Meeting,Administrative Events,4
+346,https://www.meetup.com/Usability-Stammtisch-Berlin/events/225607741/,225607741,USB #1510 - The IoT Service Kit @MeshCon @Maker Faire Event,Conferences,4
+347,https://www.meetup.com/I-T-Social-Cafe/events/226533957/,226533957,IT Nominication & International Exchange November!All-you-can-drink,Social Events,4
+348,https://www.meetup.com/barcampqld/events/227029182/,227029182,Brisbane Tech Christmas Drinks,Social Events,4
+349,https://www.meetup.com/gdg-hudson-valley/events/227110428/,227110428,2015 NYC Tech Holiday Meta-Party,Social Events,4
+350,https://www.meetup.com/softwaredev-117/events/228428586/,228428586,Selenium Demystifyed,Talks by Domain Experts,4
+351,https://www.meetup.com/hackreactorla/events/232457687/,232457687,JS Fundamentals: Arrays & Objects,Hands-on Sessions,4
+352,https://www.meetup.com/Internet-of-Things-IoT-World/events/232789352/,232789352,The future of IOT: Perspective from Huawei,Talks by Domain Experts,4
+353,https://www.meetup.com/Tokyo-Haskell-Meetup/events/235016449/,235016449,Help Each Other Learn Haskell,Open Discussion,4
+354,https://www.meetup.com/emerging-martech/events/245415410/,245415410,Partner Event: How are AI Devices Changing the Way Children Think/Behave,Talks by Domain Experts,4
+355,https://www.meetup.com/Cape-Town-Java-Meetup/events/246486414/,246486414,Pizza Mayhem and Lucene Case Study @ Travelstart,Talks by Domain Experts,4
+356,https://www.meetup.com/HackPGH/events/246837085/,246837085,Welding 101 Industrial Lamp,Others,4
+357,https://www.meetup.com/London-Julia-User-Group/events/248191284/,248191284,An Introduction to Julia  Free hands-on training,Hands-on Sessions,4
+358,https://www.meetup.com/Pune-GDG/events/87328772/,87328772,Android Code Lab:,Hands-on Sessions,4
+359,https://www.meetup.com/Grand-Rapids-Mobile-Development-Group/events/90703992/,90703992,Juggling Free and Non-Free Android and iOS Apps Wireframing with Balsamiq DDRs,Talks by Domain Experts,4
+360,https://www.meetup.com/Girl-Develop-It-Austin/events/93223062/,93223062,Rails Girls Austin,Hands-on Sessions,4
+361,https://www.meetup.com/pythonireland/events/236583806/,cspwwlywfblb,Python Ireland March meetup,Talks by Domain Experts,4
+362,https://www.meetup.com/SecureIndy/events/239951293/,dcnpzlywjbmb,InfoSec Social (version Circle City Con),Social Events,4
+363,https://www.meetup.com/full-stack-developer-il/events/153089582/,dgcmchyrqbxb,The Fundamentals of Scaling Rails Application workshop (Session 2/2),Hands-on Sessions,4
+364,https://www.meetup.com/DC-PHP/events/219488811/,dpfgjgytdbpb,February Meeting: Commanding a More Meaningful REST API,Talks by Domain Experts,4
+365,https://www.meetup.com/LondonSalesforceDevelopers/events/230630350/,dxrzzdywcbhc,New Year New Speakers,Talks by Domain Experts,4
+366,https://www.meetup.com/OdooApps/events/176616392/,mqzzslyvlbnb,Simplifying Your Stock Management/Inventory (with Odoo),Others,4
+367,https://www.meetup.com/Cincinnati-Javascript-User-Group/events/214829172/,qpzszjyspbqb,Kevin Rockwood on CORS,Talks by Domain Experts,4
+368,https://www.meetup.com/gdg-seattle/events/173911922/,wqgwclytfbvb,Getting a Go application working on App Engine,Talks by Domain Experts,4
+369,https://www.meetup.com/General-Assembly-Austin/events/234655903/,234655903,The Product League Presents: Lean Canvas Failures,Open Discussion,4
+370,https://www.meetup.com/UK-Hackathons-and-Jams/events/230336682/,230336682,Fishackathon London April 22-24 Earth day! ><>,Competitions,3
+371,https://www.meetup.com/julia-cajun/events/174457402/,174457402,JuliaCon 2014 in Chicago,Conferences,3
+372,https://www.meetup.com/nodebots/events/222558851/,222558851,.::Nodebots May Hacknight::.,Hands-on Sessions,3
+373,https://www.meetup.com/socratesbe/events/231385391/,231385391,Hands-on by Yves Reynhout: Projections Explained,Hands-on Sessions,3
+374,https://www.meetup.com/Bootcamp-Curious/events/240769603/,240769603,Master JavaScript Functions,Hands-on Sessions,3
+375,https://www.meetup.com/Appy-Hour/events/175195782/,175195782,Appy Hour @ SURF 4/16,Open Discussion,3
+376,https://www.meetup.com/Girl-Develop-It-Cincinnati/events/76535772/,76535772,Code & Coffee,Open Discussion,3
+377,https://www.meetup.com/girldevelopitcbus/events/236387972/,swnknlywcbhc,Re/Discover GDI Columbus: Hot Chocolate Hack Night,Open Discussion,3
+378,https://www.meetup.com/tampa-bay-agile/events/93001052/,93001052,Tampa Bay Agile - Social Hour,Social Events,3
+379,https://www.meetup.com/Seattle-Tech-Mentors/events/222059002/,ggbkflythbrb,Meet Indeed.com,Social Events,3
+380,https://www.meetup.com/SF-WordPress-Users/events/149071872/,149071872,WPMIA Fort Lauderdale Meetup: Design Wordpress to Maximize ROI / BuddyPress,Talks by Domain Experts,3
+381,https://www.meetup.com/codeharbour/events/203229442/,203229442,codeHarbour September,Talks by Domain Experts,3
+382,https://www.meetup.com/GamedevGR/events/218661318/,218661318,Wild World of Assets,Talks by Domain Experts,3
+383,https://www.meetup.com/Khronos-Melbourne-Chapter/events/228221875/,228221875,Computer Graphics on the Web,Talks by Domain Experts,3
+384,https://www.meetup.com/MyHeritage-Meetup/events/231855989/,231855989,Cassandra Meetup at MyHeritage,Talks by Domain Experts,3
+385,https://www.meetup.com/AndroidListener-Chicago/events/234506877/,234506877,AndroidListener November 2016,Talks by Domain Experts,3
+386,https://www.meetup.com/GraphTO/events/234777879/,234777879,Attend Free Live Webinar on Apache Spark by Industry Expert,Talks by Domain Experts,3
+387,https://www.meetup.com/budapest-scala/events/234935237/,234935237,Reactive Applications in the Scala Ecosystem Cake,Talks by Domain Experts,3
+388,https://www.meetup.com/Bay-Area-Billing-and-Payment-Engineers/events/235297685/,235297685,Tech Talks At Uber,Talks by Domain Experts,3
+389,https://www.meetup.com/Cocoaheads-Phoenix-Scottsdale/events/238114342/,238114342,March 2017 Cocoaheads iOS Developer Group Meeting,Talks by Domain Experts,3
+390,https://www.meetup.com/build-with-code-los-angeles/events/244092219/,244092219,SoCal React x NodeLA - Redux Form | Code Splitting | Monkey Patching,Talks by Domain Experts,3
+391,https://www.meetup.com/Los-Angeles-Health-2-0-Meetup-Group/events/228190791/,jlgbplyvcblc,Conversation with Digital Health Startup Leaders from Frame Health & Better,Talks by Domain Experts,3
+392,https://www.meetup.com/Fremont-Agile-Meetup/events/145158812/,qbgbgdyrpbcc,Fremont Agile Meetup,Talks by Domain Experts,3
+393,https://www.meetup.com/bitcoinvan/events/219291649/,219291649,2MORO - This Thursday: Its On Like Donkey Kong,Others,3
+394,https://www.meetup.com/Montana-Programmers/events/228019512/,228019512,Montana Code School Info Session (Bozeman),Others,3
+395,https://www.meetup.com/Londonjavacommunity/events/8357284/,8357284,Scala LUG: Introducing Scala,Others,3
+396,https://www.meetup.com/AtlAltDotNet/events/10435642/,10435642,ATL ALT.NET Dunwoody Lunch: Atlanta Bread Thur 5/21 11:30 AM ,Social Events,3
+397,https://www.meetup.com/LLVM-Developers-Users-Meetup/events/239024337/,239024337,LLVM Users/Developers Social Meetup,Social Events,2
+398,https://www.meetup.com/IT-Meetup-Bali/events/221437402/,221437402,April IT Meetup,Talks by Domain Experts,2
+399,https://www.meetup.com/Singapore-Magento-User-Group/events/234325257/,234325257,Singapore Magento User Group Meetup - Oct 2016,Talks by Domain Experts,2
+400,https://www.meetup.com/Girl-Develop-It-Tampa-Bay/events/239269682/,239269682,Intro to Sass,Hands-on Sessions,2
+401,https://www.meetup.com/CofoundersHouston/events/225877087/,225877087,Design-Usability-Marketing Friday Hibachi Luncheon-Networking,Social Events,2
+402,https://www.meetup.com/1871-Hackers/events/102570522/,102570522,March Meetup - Testing,Talks by Domain Experts,2
+403,https://www.meetup.com/owaspnyc/events/220077052/,cdrvjlytqbvb,NYC: Exploits & Innovation @ Goldman Sachs,Talks by Domain Experts,2
+404,https://www.meetup.com/baltimore-python/events/239922789/,djjdpdywjbcc,Monthly Meetup,Talks by Domain Experts,2
+405,https://www.meetup.com/The-Code-Pub-Stockholm/events/183631142/,183631142,The Code Pub 1-year anniversary,Talks by Domain Experts,2
+406,https://www.meetup.com/PySprings/events/158719002/,158719002,Project Night: IRC Chat Bots,Hands-on Sessions,2
+407,https://www.meetup.com/software_developer_study_group/events/219277404/,219277404,Bootstrap 3 for the New Year (Part 2 of 2),Hands-on Sessions,2
+408,https://www.meetup.com/Web-Performance-SanDiego/events/232476879/,232476879,Double Header! Early Performance Testing & Improving Front-end Performance,Talks by Domain Experts,2
+409,https://www.meetup.com/atlsoftwarecrafting/events/234091729/,234091729,Automation & Iterative Development,Talks by Domain Experts,2
+410,https://www.meetup.com/devstaff/events/236518707/,236518707,Lightning Talks on a Range of Topics to Kick-Off 2017 !,Open Discussion,2
+411,https://www.meetup.com/DigiTech-Wandsworth/events/240084592/,240084592,Monthly networking meeting,Social Events,2
+412,https://www.meetup.com/Rhode-Island-SQL-Server-Users-Group/events/241787462/,241787462,Tool Time  Simple Tools to Make the Life of DBAs Easier by Jeff Moden,Talks by Domain Experts,2
+413,https://www.meetup.com/GDG-Liverpool/events/242193174/,242193174,August - Test-driven development featuring Kotlin!,Talks by Domain Experts,2
+414,https://www.meetup.com/Flatiron-School-Presents/events/248999135/,248999135,Alumni Panel at WeWork Dumbo Heights,Others,2
+415,https://www.meetup.com/FileMaker-Indiana/events/214090862/,dwhqrkyspbjb,FMP URLs - How to take your FileMaker development to the next level,Talks by Domain Experts,2
+416,https://www.meetup.com/Raspberry-Pi/events/236791026/,pmzdlmywcbqb,Raspberry Pi Toronto Meetup - Node.JS,Talks by Domain Experts,2
+417,https://www.meetup.com/TC-TAG/events/58270712/,qlkbscyqhbvb,TCTAG Meeting,Talks by Domain Experts,2
+418,https://www.meetup.com/Santiago-Startup-Founder-101/events/199006392/,199006392,Virtual Webinar: Get Feedback on Your Business Idea from Silicon Valley,Others,2
+419,https://www.meetup.com/Software-Training-Technology-Workshops-STTW/events/234986677/,234986677,How to Start Your Own IT Business While Working a Full Time Job,Others,2
+420,https://www.meetup.com/Netflix-Open-Source-Platform/events/219695454/,219695454,Season 3 Episode 1,Talks by Domain Experts,2
+421,https://www.meetup.com/djangoboston/events/230159925/,230159925,Jeremy Bowman: Stealthy Django Deployments,Talks by Domain Experts,2
+422,https://www.meetup.com/OCAndroid/events/41460852/,dhzdhcyppbvb,SoCalAndroid Hack Nights OCAndroid listing,Hands-on Sessions,2
+423,https://www.meetup.com/fredlug/events/191805082/,qpwxfhysmbkc,BASH Scripting and REGEX Basic,Talks by Domain Experts,2
+424,https://www.meetup.com/NYC-Magento-Developers/events/224263423/,224263423,Pre Meet Magento NY Hackathon,Competitions,1
+425,https://www.meetup.com/LondonSalesforceDevelopers/events/117971282/,117971282,Save the Date: Heroku Fork-a-thon,Hands-on Sessions,1
+426,https://www.meetup.com/girldevelopit/events/242429509/,242429509,Intro to JavaScript,Hands-on Sessions,1
+427,https://www.meetup.com/Pgh-Tech/events/97250832/,97250832,Pitching and Presenting Workshop,Hands-on Sessions,1
+428,https://www.meetup.com/SCUnityUsers/events/139404202/,139404202,October SCUUG Meetup,Open Discussion,1
+429,https://www.meetup.com/ThoughtWorks-Hyderabad/events/239128585/,239128585,vodQA - Value Oriented Discussion about Quality Analysts,Open Discussion,1
+430,https://www.meetup.com/SanDiegoPHP/events/179831622/,qctdzhyslbgb,PHP Study Group Meetup (Weekly),Open Discussion,1
+431,https://www.meetup.com/Women-Who-Code-Austin/events/226502840/,tgzmjlytqbkb,Lightning Learning - Sponsored by Square Root and Capital Factory,Open Discussion,1
+432,https://www.meetup.com/SGVTech/events/169432972/,169432972,SGVHAK visits PCC Fab Lab Open House,Others,1
+433,https://www.meetup.com/Girl-Develop-It-Boston/events/153652922/,153652922,Tech in Motions Women in Tech Panel,Talks by Domain Experts,1
+434,https://www.meetup.com/svandroid/events/188819952/,188819952,Android Developer Tools Showcase,Talks by Domain Experts,1
+435,https://www.meetup.com/BoulderJavaUsersGroup/events/200573112/,200573112,Craig Walls - Whats new in Spring?,Talks by Domain Experts,1
+436,https://www.meetup.com/Swagger-API/events/221677682/,221677682,NYC: Swagger in the API Lifecycle,Talks by Domain Experts,1
+437,https://www.meetup.com/Papers-We-Love-Toronto/events/226167802/,226167802,#13 Raveesh Nagpal on An Error Model for Pointing Based on Fitts Law,Talks by Domain Experts,1
+438,https://www.meetup.com/Node-JS-Boston/events/226324690/,226324690,OSDI HAL-JSON APIs and Robot SDKs with Electron,Talks by Domain Experts,1
+439,https://www.meetup.com/NET-Open-Group/events/228010708/,228010708,Introduction to Neo4j graph database,Talks by Domain Experts,1
+440,https://www.meetup.com/Medellin-Python-y-Django-Meetup/events/233856903/,233856903,Python + MongoDB and Inside the box: Python Memory Manager,Talks by Domain Experts,1
+441,https://www.meetup.com/NYCIOT/events/234738811/,234738811,Crowdfunding & Developing Your IoT Product,Talks by Domain Experts,1
+442,https://www.meetup.com/IoT-Peoria-Illinois/events/240017480/,240017480,Smart Manufacturing,Talks by Domain Experts,1
+443,https://www.meetup.com/ChicagoRuby/events/21988641/,cfggsyppbcb,ChicagoRuby: Downtown - Fast Rails Tests,Talks by Domain Experts,1
+444,https://www.meetup.com/Boston-Haskell/events/184313402/,dpzkwhyskbvb,Talks by Paul Chiusano and Ed Kmett,Talks by Domain Experts,1
+445,https://www.meetup.com/sarubycoders/events/228864675/,lztwllyvfbpc,SA Coders Monthly Meetup,Talks by Domain Experts,1
+446,https://www.meetup.com/Hackers-and-Founders-Amsterdam-NL/events/240159028/,mrnxkmywlbfb,Hackers & Founders (Amsterdam NL) Meetup,Talks by Domain Experts,1
+447,https://www.meetup.com/NoCoNET/events/125120462/,qzvdpcyrkblb,Building Location-aware Windows applications with Shawn Kendrot,Talks by Domain Experts,1
+448,https://www.meetup.com/Tech-Talent-South-Charlotte/events/225709819/,225709819,Tech Talent South: Beer Cocktails & Branding Beautifully,Others,1
+449,https://www.meetup.com/Los-Angeles-Hack-Night/events/228128239/,228128239,Adapting to 2016 BYOP (Bring Your Own Prototype),Open Discussion,1
+450,https://www.meetup.com/Los-Angeles-Hack-Night/events/228128239/,228128239,Adapting to 2016 BYOP (Bring Your Own Prototype),Talks by Domain Experts,1
+451,https://www.meetup.com/MadPython/events/241873343/,241873343,A quick tour of Allen Downeys Think Complexity,Talks by Domain Experts,1
+452,https://www.meetup.com/Durban-Maker-Meetup/events/243269014/,243269014,Skateboard Workshop,Others,1
